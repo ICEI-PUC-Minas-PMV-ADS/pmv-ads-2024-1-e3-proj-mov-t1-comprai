@@ -6,7 +6,8 @@
 
 `2º SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto Compraí consiste em uma ferramenta facilitadora organizacional para auxiliar de maneira simplificada em suas compras de mercado, 
+organizando de maneira intuitiva sua lista de compras e gerando o valor de suas despesas ao final.
 
 ## Integrantes
 
