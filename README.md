@@ -1,23 +1,26 @@
 # Compraí
 
-`CURSO`
+`TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio - Grupo a definir`
 
-`SEMESTRE`
+`2º SEMESTRE`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
 * Philippe Ribeiro Mesquita
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Mahavishnu Jneesh Afonso
+* Allan Cesar Amaral Gomes
+* João Gabriel Pereira da Silva
+* Rafael Santana de Oliveira 
+* Nome completo do aluno 6
+* Nome completo do aluno 7
 
 ## Orientador
 
-* Nome completo do professor 1
+* Will Ricardo dos Santos Machado
 
 ## Instruções de utilização
 
