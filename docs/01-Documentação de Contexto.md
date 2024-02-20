@@ -1,6 +1,6 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Nosso projeto apresenta um aplicativo de lista de compras inteligente, visando simplificar a gestão de compras diárias para diversos perfis de usuários. Com foco em facilitar a organização, economizar tempo e dinheiro, oferecemos uma solução intuitiva que permite criar listas personalizadas, comparar preços entre estabelecimentos e compartilhar facilmente entre membros da família. Essa abordagem proporciona uma experiência de compra mais eficiente e econômica para todos.
 
 ## Problema
 
