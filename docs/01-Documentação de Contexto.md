@@ -10,11 +10,11 @@ Em suma, o problema a ser resolvido é o desenvolvimento de um sistema de lista 
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Facilitar a Organização
+Economia de Tempo
+Economizar Dinheiro
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
+Desenvolver uma aplicação de lista de compras para facilitar a organização dos usuários, oferecer uma plataforma intuitiva para criar listas personalizadas de itens necessários, categorizar e lembrar, economizando tempo ao simplificar o processo de planejamento e compra de mantimentos. Cadastrar produtos de supermercados com seus respectivos valores para ajudar os usuários a comparar preços e economizar dinheiro. Combinar praticidade, eficiência e economia para criar um aliado indispensável para uma experiência de compra mais inteligente e econômica.
 
 
 ## Justificativa
