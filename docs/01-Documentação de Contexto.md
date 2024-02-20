@@ -19,7 +19,13 @@ Desenvolver uma aplicação de lista de compras para facilitar a organização d
 
 ## Justificativa
 
+No mundo de hoje, onde economizar tempo e reduzir custos é uma prioridade para muitas pessoas, nosso aplicativo visa facilitar as compras para uma ampla gama de usuários. Desenvolvemos uma plataforma intuitiva, projetada para ser acessível a todas as idades, independentemente do nível de familiaridade com a tecnologia.
 
+Nossa proposta é simples: permitir que famílias criem listas de compras com os produtos desejados, enquanto armazenamos informações sobre a variação de preços entre diferentes estabelecimentos. Essas listas podem ser facilmente compartilhadas entre os membros da família, ajudando a economizar tempo durante as compras. Além disso, mantemos um histórico das compras anteriores, garantindo que mesmo aqueles com problemas de memória nunca esqueçam produtos essenciais.
+
+A interface do nosso aplicativo foi cuidadosamente projetada para garantir que seja acessível a todos, incluindo crianças, idosos e pessoas com deficiências, proporcionando uma experiência sem complicações para todos os usuários.
+
+Com nosso aplicativo, tornamos o processo de compras mais eficiente, conveniente e acessível para todos os tipos de usuários.
 
 ## Público-Alvo
 
