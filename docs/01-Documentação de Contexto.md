@@ -10,14 +10,24 @@ Em suma, o problema a ser resolvido é o desenvolvimento de um sistema de lista 
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Facilitar a Organização
+Economia de Tempo
+Economizar Dinheiro
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Desenvolver uma aplicação de lista de compras para facilitar a organização dos usuários, oferecer uma plataforma intuitiva para criar listas personalizadas de itens necessários, categorizar e lembrar, economizando tempo ao simplificar o processo de planejamento e compra de mantimentos. Cadastrar produtos de supermercados com seus respectivos valores para ajudar os usuários a comparar preços e economizar dinheiro. Combinar praticidade, eficiência e economia para criar um aliado indispensável para uma experiência de compra mais inteligente e econômica.
+
 
 ## Justificativa
+
+No mundo de hoje, onde economizar tempo e reduzir custos é uma prioridade para muitas pessoas, nosso aplicativo visa facilitar as compras para uma ampla gama de usuários. Desenvolvemos uma plataforma intuitiva, projetada para ser acessível a todas as idades, independentemente do nível de familiaridade com a tecnologia.
+
+Nossa proposta é simples: permitir que famílias criem listas de compras com os produtos desejados, enquanto armazenamos informações sobre a variação de preços entre diferentes estabelecimentos. Essas listas podem ser facilmente compartilhadas entre os membros da família, ajudando a economizar tempo durante as compras. Além disso, mantemos um histórico das compras anteriores, garantindo que mesmo aqueles com problemas de memória nunca esqueçam produtos essenciais.
+
+A interface do nosso aplicativo foi cuidadosamente projetada para garantir que seja acessível a todos, incluindo crianças, idosos e pessoas com deficiências, proporcionando uma experiência sem complicações para todos os usuários.
+
+Com nosso aplicativo, tornamos o processo de compras mais eficiente, conveniente e acessível para todos os tipos de usuários.
+
+## Público-Alvo
 
 Esse problema é enfrentado por uma ampla gama de pessoas, incluindo:
 
@@ -28,16 +38,3 @@ Esse problema é enfrentado por uma ampla gama de pessoas, incluindo:
 Consumidores conscientes: Pessoas que desejam reduzir o desperdício de alimentos, evitar compras impulsivas e maximizar o uso eficiente de seu orçamento.
 
 Em resumo, o problema da gestão de listas de compras é comum a uma variedade de grupos demográficos, todos buscando uma maneira mais eficaz e conveniente de planejar e executar suas compras.
-
-## Público-Alvo
-
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
