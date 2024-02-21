@@ -2,7 +2,7 @@
 
 `TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio - Grupo a definir`
+`Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio - Time 4`
 
 `2º SEMESTRE`
 
@@ -16,8 +16,8 @@ organizando de maneira intuitiva sua lista de compras e gerando o valor de suas 
 * Allan Cesar Amaral Gomes
 * João Gabriel Pereira da Silva
 * Rafael Santana de Oliveira 
-* Nome completo do aluno 6
-* Nome completo do aluno 7
+* Pedro Henrique Filgueiras Couto
+* Ercules Mauricio de Siqueira Filho
 
 ## Orientador
 
