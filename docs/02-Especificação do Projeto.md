@@ -8,7 +8,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 *Persona 1*
 
-|<img src="/docs/img/Jorge.jpg" width="156" height="156">  | **Jorge** <br> 22 anos|
+|<img src="/docs/img/Jorge.jpg" width="158" height="158">  | **Jorge** <br> 22 anos|
 |:---------------------------------------:|:-------------------------------:|
 |**Profissão** | Universitário |
 |**História** | Jorge é um estudante universitário que mora sozinho. Ele não tem muita experiência com compras e muitas vezes se esquece de comprar itens essenciais. |
@@ -17,7 +17,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 *Persona 2*
 
-|<img src="/docs/img/Julia.jpg" width="156" height="156">  | **Julia** <br> 36 anos|
+|<img src="/docs/img/Julia.jpg" width="158" height="158">  | **Julia** <br> 36 anos|
 |:---------------------------------------:|:-------------------------------:|
 |**Profissão** | Nutricionista |
 |**História** | Julia é uma nutricionista que está sempre procurando maneiras de ajudar seus clientes a manter uma dieta saudável. |
@@ -26,7 +26,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 *Persona 3*
 
-|<img src="/docs/img/Ana.jpg" width="156" height="156">  | **Ana** <br> 64 anos|
+|<img src="/docs/img/Ana.jpg" width="158" height="158">  | **Ana** <br> 64 anos|
 |:---------------------------------------:|:-------------------------------:|
 |**Profissão** | Aposentada |
 |**História** | Ana é uma aposentada que gosta de cozinhar para sua família e amigos. |
@@ -35,7 +35,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 *Persona 4*
 
-|<img src="/docs/img/Maria.jpg" width="156" height="156">  | **Maria** <br> 40 anos|
+|<img src="/docs/img/Maria.jpg" width="158" height="158">  | **Maria** <br> 40 anos|
 |:---------------------------------------:|:-------------------------------:|
 |**Profissão** | Gerente Executiva |
 |**História** | Maria é uma mãe de dois filhos que trabalha em tempo integral. |
