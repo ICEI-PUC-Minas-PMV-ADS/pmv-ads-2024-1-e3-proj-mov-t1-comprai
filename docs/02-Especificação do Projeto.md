@@ -1,44 +1,58 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A definição precisa do problema e os principais aspectos a serem abordados neste projeto foram estabelecidos por meio de um trabalho de imersão realizado pela equipe, envolvendo a observação dos usuários em seu ambiente natural e entrevistas. Os insights obtidos foram sintetizados em personas e histórias de usuários para orientar o desenvolvimento do projeto.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+As personas levantadas durante o processo de entendimento do problema são apresentadas na Figuras que se seguem.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+*Persona 1*
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+|<img src="/docs/img/Jorge.jpg" width="156" height="156">  | **Jorge** <br> 22 anos|
+|:---------------------------------------:|:-------------------------------:|
+|**Profissão** | Universitário |
+|**História** | Jorge é um estudante universitário que mora sozinho. Ele não tem muita experiência com compras e muitas vezes se esquece de comprar itens essenciais. |
+|**Motivação** | Jorge passa horas do dia com fome por não saber gerenciar suas compras no mercado e manter uma alimentação correta. |
+|**Desafio** | Jorge busca encontrar uma ferramenta para lembrar o que precisa comprar e para manter o controle de seus gastos com alimentos. |
+
+*Persona 2*
+
+|<img src="/docs/img/Julia.jpg" width="156" height="156">  | **Julia** <br> 36 anos|
+|:---------------------------------------:|:-------------------------------:|
+|**Profissão** | Nutricionista |
+|**História** | Julia é uma nutricionista que está sempre procurando maneiras de ajudar seus clientes a manter uma dieta saudável. |
+|**Motivação** | Julia não consegue de maneira eficaz passar uma lista de supermercado para seus clientes sem gastar horas de seu dia montando-a manualmente. |
+|**Desafio** | Julia se interessa muito em usufruir de uma ferramenta que simplifica a montagem de uma lista de compras na qual pouparia parte do seu tempo gasto a essa tarefa em seu dia a dia. |
+
+*Persona 3*
+
+|<img src="/docs/img/Ana.jpg" width="156" height="156">  | **Ana** <br> 64 anos|
+|:---------------------------------------:|:-------------------------------:|
+|**Profissão** | Aposentada |
+|**História** | Ana é uma aposentada que gosta de cozinhar para sua família e amigos. |
+|**Motivação** | Ana se encontra na busca de novas receitas para realizar e não sabe como ter um controle de orçamento na hora de comprar seus ingredientes necessários. |
+|**Desafio** | Ana gostaria de ter praticidade e um sistema integrado que calcula suas compras facilmente ao adicionar itens em sua lista de compras. |
+
+*Persona 4*
+
+|<img src="/docs/img/Maria.jpg" width="156" height="156">  | **Maria** <br> 40 anos|
+|:---------------------------------------:|:-------------------------------:|
+|**Profissão** | Gerente Executiva |
+|**História** | Maria é uma mãe de dois filhos que trabalha em tempo integral. |
+|**Motivação** | Maria perde muito tempo preparando listas de compra manuais e assim não consegue ter disponibilidade para dar mais atenção aos filhos. |
+|**Desafio** | Maria faria bom uso de uma aplicativo que facilitasse e poupasse seu tempo na hora de organizar suas compras de mercado. |
 
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|EU COMO `Jorge`| QUERO/PRECISO `de lembretes do que comprar através de um aplicativo` |PARA `garantir que não me esqueça de itens essenciais`|
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+|EU COMO `Julia`| QUERO/PRECISO `usar um aplicativo para planejar e organizar as compras de supermercado` |PARA `garantir que eu e meus clientes mantenhamos uma alimentação balanceada`|
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|EU COMO `Ana`| QUERO/PRECISO `planejar minhas compras em um aplicativo com base nas receitas que quero experimentar` |PARA `manter o controle do meu orçamento e garantir que tenho todos os ingredientes necessários`|
+
+|EU COMO `Maria`| QUERO/PRECISO `criar e organizar minha lista pelo celular` |PARA `economizar tempo e me concentrar mais na minha família`|
 
 ## Modelagem do Processo de Negócio 
 
@@ -108,16 +122,12 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|ID| Restrição                                                                                                  |
+|--|------------------------------------------------------------------------------------------------------------|
+|01| O projeto deverá ser entregue até o final do semestre                                                      |
+|02| Não pode ser desenvolvido um módulo de backend                                                             |
+|03| O sistema deve ser compatível com as plataformas iOS e Android para garantir a acessibilidade aos usuários |
+|04| O sistema deve suportar o português brasileiro, pois é o idioma principal dos usuários-alvo                |
 
 ## Diagrama de Casos de Uso
 
