@@ -162,6 +162,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 |Jorge  | De lembretes do que comprar através de um aplicativo | Garantir que não me esqueça de itens essenciais                |
 |Júlia| Usar um aplicativo para planejar e organizar as compras de supermercado| Garantir que eu e meus clientes mantenhamos uma alimentação balanceada |
 |Dona Ana | Planejar minhas compras em um aplicativo com base nas receitas que quero experimentar | Manter o controle do meu orçamento e garantir que tenho todos os ingredientes necessários |
+|Dona Ana | Aplicação deve ser de fácil uso | Experiência de uso fácil e intuitivo |
 |Maria| Poder criar e organizar minha lista de compras pelo celular de maneira fácil | Economizar tempo e me concentrar mais na minha família |
 |Carlos | Preciso gerenciar minhas compras de supermercado | Me concentrar em meu trabalho e hobbies. |
 
@@ -210,16 +211,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-003| 	O sistema deve permitir que os usuários removam itens da lista de compras.   | ALTA |
 |RF-004| 	O sistema deve permitir que os usuários marquem itens como comprados na lista de compras.  | MÉDIA |
 |RF-005| 	O sistema deve calcular o total de despesas com base nos itens da lista de compras.  | ALTA |
-|RF-006| O sistema deve enviar lembretes aos usuários sobre os itens que precisam ser comprados.   | MÉDIA |
+|RF-006| O sistema deve enviar lembretes aos usuários sobre os itens que precisam ser comprados.   | BAIXA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser fácil de usar e intuitivo. | ALTA | 
-|RNF-002| 	O sistema deve ser capaz de processar e responder às solicitações do usuário de maneira rápida e eficiente. |  ALTA |
-|RNF-003| 	O sistema deve estar disponível para uso a qualquer momento e em qualquer lugar.|  MÉDIA |
-|RNF-004| O sistema deve ser compatível com as plataformas iOS e Android. | MÉDIA |
+|RNF-001| 	A aplicação deverá ser desenvolvida usando React Native | ALTA | 
+|RNF-002| O sistema deve ser fácil de usar e intuitivo. | ALTA | 
+|RNF-003| 	O sistema deve ser capaz de processar e responder às solicitações do usuário de maneira rápida e eficiente. |  ALTA |
+|RNF-004| 	O sistema deve estar disponível para uso a qualquer momento e em qualquer lugar.|  MÉDIA |
+|RNF-005| O sistema deve ser compatível com as plataformas iOS e Android. | MÉDIA |
+|RNF-006| A aplicação deve possuir uma interface simples, apresentando as informações de forma visual e acessível | MÉDIA |
 
 ## Restrições
 
