@@ -206,18 +206,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| O sistema deve permitir que os usuários criem uma lista de compras. | ALTA | 
-|RF-002| O sistema deve permitir que os usuários adicionem itens à lista de compras.   | ALTA |
-|RF-003| 	O sistema deve permitir que os usuários removam itens da lista de compras.   | ALTA |
-|RF-004| 	O sistema deve permitir que os usuários marquem itens como comprados na lista de compras.  | MÉDIA |
-|RF-005| 	O sistema deve calcular o total de despesas com base nos itens da lista de compras.  | ALTA |
-|RF-006| O sistema deve enviar lembretes aos usuários sobre os itens que precisam ser comprados.   | BAIXA |
+|RF-001| O sistema deve permitir o cadastro de usuários. | ALTA | 
+|RF-002| O sistema deve permitir que os usuários criem uma lista de compras. | ALTA | 
+|RF-003| O sistema deve permitir que os usuários adicionem itens à lista de compras.   | ALTA |
+|RF-004| 	O sistema deve permitir que os usuários removam itens da lista de compras.   | ALTA |
+|RF-005| 	O sistema deve permitir que os usuários marquem itens como comprados na lista de compras.  | MÉDIA |
+|RF-006| 	O sistema deve calcular o total de despesas com base nos itens da lista de compras.  | ALTA |
+|RF-007| O sistema deve enviar lembretes aos usuários sobre os itens que precisam ser comprados.   | BAIXA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| 	A aplicação deverá ser desenvolvida usando React Native | ALTA | 
+|RNF-001| A senha do usuário deve conter no mínimo seis caracteres | ALTA | 
 |RNF-002| O sistema deve ser fácil de usar e intuitivo. | ALTA | 
 |RNF-003| 	O sistema deve ser capaz de processar e responder às solicitações do usuário de maneira rápida e eficiente. |  ALTA |
 |RNF-004| 	O sistema deve estar disponível para uso a qualquer momento e em qualquer lugar.|  MÉDIA |
@@ -234,6 +235,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RE-02| O sistema deve suportar o português brasileiro, pois é o idioma principal dos usuários-alvo. |
 |RE-03| O projeto deve ser construído apenas por pessoas da equipe. |
 |RE-04| O sistema deve ser capaz de se adaptar a mudanças futuras, como a adição de novas funcionalidades ou a integração com outros sistemas. |
+|RE-05| A aplicação deverá ser desenvolvida usando React Native |
 
 
 ## Diagrama de Casos de Uso
