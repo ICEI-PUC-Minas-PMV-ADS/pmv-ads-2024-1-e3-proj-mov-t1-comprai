@@ -75,10 +75,14 @@ Abaixo imagem do GitHub Project utilizado pela equipe:
 
 As ferramentas empregadas no projeto são:
 
+- `Repositório`: GitHub
+- `Gerenciamento do Projeto`: GitHub Projects
 - `Editor de código:` Visual Studio Code
 - `Ferramentas de comunicação:` Discord
 - `Ferramentas de desenho de tela:` Figma/MarcelApp
 - `Ferramentas de criação de diagramas:` Lucidchart
+
+A ferramente utilizada como repositório foi o GitHub. Optamos por sua escolha porque ela oferece o gerenciamento do projeto, mantendo toda a equipe informada e sincronizada com relação às tarefas baseadas na metodologia Scrum.
 
 Visual Studio Code: Foi escolhido por sua integração com sistemas de controle de versão, o que facilita o gerenciamento e o rastreamento de alterações no código do projeto.
 
