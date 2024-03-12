@@ -49,7 +49,6 @@ A equipe está ultilizando metodologias ágeis, tendo escolhido o Scrum como bas
 
 `Equipe de Design:`
 * Philippe Ribeiro Mesquita
-* Mahavishnu Jneesh Afonso de Almeida
 
 ### Processo
 
@@ -82,13 +81,13 @@ As ferramentas empregadas no projeto são:
 - `Ferramentas de desenho de tela:` Figma/MarcelApp
 - `Ferramentas de criação de diagramas:` Lucidchart
 
-A ferramente utilizada como repositório foi o GitHub. Optamos por sua escolha porque ela oferece o gerenciamento do projeto, mantendo toda a equipe informada e sincronizada com relação às tarefas baseadas na metodologia Scrum.
+A ferramenta utilizada como repositório foi o GitHub. Optamos por sua escolha porque ela oferece o gerenciamento do projeto, mantendo toda a equipe informada e sincronizada com relação às tarefas baseadas na metodologia Scrum.
 
 Visual Studio Code: Foi escolhido por sua integração com sistemas de controle de versão, o que facilita o gerenciamento e o rastreamento de alterações no código do projeto.
 
 Discord: Foi selecionado por sua facilidade de comunicação e a colaboração entre os membros da equipe.
 
-Figma/MarcelApp: Foram escolhidas por sua capacidade de criar designs de interface do usuário de alta qualidade e interativos, o que é crucial para o desenvolvimento de um software centrado no usuário.
+Figma: Foi escolhido por sua capacidade de criar designs de interface do usuário de alta qualidade e interativos, o que é crucial para o desenvolvimento de um software centrado no usuário.
 
 Lucidchart: Foi utilizada por atender melhor a estrutura e o fluxo dos diagramas.
 
