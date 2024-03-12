@@ -11,8 +11,6 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 ![Diagrama de Fluxo Compraí](img/Diagrama-de-fluxo-Compraí.png)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
 ## Wireframes
 
 ![Wireframe Compraí](img/Wireframe-Compraí.png)
