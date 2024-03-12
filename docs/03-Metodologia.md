@@ -68,7 +68,7 @@ O quadro está descrito da seguinte forma:
 
 Abaixo imagem do GitHub Project utilizado pela equipe:
 
-(img/Projects-Comprai.png)
+![Print do Projects Compraí](img/Projects-Comprai.png)
 
 ### Ferramentas
 
