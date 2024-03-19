@@ -47,15 +47,13 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
-
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
-
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+| **Subcaracterísticas de Qualidade de Software** | **Justificativa**                                                                                                                         | **Métrica**                                                                                                  |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Adequação funcional                             | O software deve oferecer todas as funcionalidades necessárias para atender aos requisitos do cliente.                                     | Todas as funcionalidades especificadas no requisito foram implementadas corretamente?                        |
+| Capacidade de recuperação                       | A capacidade de recuperação garante que o software possa se recuperar de falhas ou interrupções e retomar suas operações normalmente.     | Quanto tempo leva para o software se recuperar de uma falha e voltar à operação normal?                      |
+| Facilidade de aprendizado                       | A facilidade de aprendizado torna o software mais acessível e reduz a curva de aprendizado para os usuários novatos.                      | Os usuários podem aprender a usar o software rapidamente, com pouca orientação adicional?                    |
+| Tempo de resposta                               | O tempo de resposta rápido é crucial para garantir uma experiência de usuário fluida e responsiva, especialmente em sistemas interativos. | Qual é o tempo médio de resposta do sistema para as interações do usuário?                                   |
+| Estabilidade de modificação                     | A capacidade de realizar alterações sem introduzir erros adicionais é essencial para a manutenção contínua do software.                   | Com que frequência as modificações introduzem novos bugs ou problemas no software?                           |
+| Adaptabilidade                                  | A capacidade do software de ser adaptado para diferentes ambientes ou plataformas é essencial para sua utilização em diversas situações.  | O software pode ser facilmente configurado e ajustado para funcionar em diferentes ambientes ou plataformas? |
+| Autenticação                                    | A autenticação é essencial para garantir que apenas usuários autorizados tenham acesso ao sistema, protegendo dados confidenciais.        | O sistema requer autenticação para acessar recursos protegidos?                                              |
+| Capacidade de tolerância a falhas               | A capacidade de tolerância a falhas permite que o software continue funcionando adequadamente mesmo na presença de falhas ou erros.       | Como o software lida com falhas inesperadas e continua operando de forma confiável?                          |		
