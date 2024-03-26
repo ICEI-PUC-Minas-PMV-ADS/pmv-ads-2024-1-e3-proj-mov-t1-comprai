@@ -2,6 +2,7 @@
 
 Os testes de software são essenciais para garantir a qualidade, confiabilidade e segurança do nosso aplicativo de lista de compras.
 
+
 | **Caso de Teste 1: Criação de Lista de Compras** |                            |
 |--------------------------------------|----------------------------|
 | **Requisito Referente**              | (RF-002), (RF-003), (RF-004)             |
@@ -12,6 +13,7 @@ Os testes de software são essenciais para garantir a qualidade, confiabilidade 
 | 2. Adicionar itens à lista, incluindo nome do produto, quantidade e quaisquer outras informações relevantes. | Os itens devem ser adicionados corretamente à lista, e as informações devem ser salvas pelo sistema. |
 | 3. Verificar se é possível editar ou remover itens da lista, se necessário. | O sistema deve permitir ao usuário editar ou remover itens da lista de compras de forma simples e intuitiva. |
 | 4. Salvar a lista de compras criada. | A lista de compras deve ser salva pelo sistema e estar disponível para acesso posterior. |
+
 
 | **Caso de Teste 2: Marcação de Itens Comprados** |                            |
 |--------------------------------------|----------------------------|
@@ -24,6 +26,7 @@ Os testes de software são essenciais para garantir a qualidade, confiabilidade 
 | 3. Marcar o item como comprado. | O sistema deve permitir ao usuário selecionar o item e marcar como comprado de forma clara e fácil. |
 | 4. Verificar se o item é atualizado corretamente na lista de compras. | Após marcar o item como comprado, ele deve ser atualizado na lista, indicando que foi comprado com sucesso. |
 
+
 | **Caso de Teste 3: Cálculo do Total de Despesas** |                            |
 |--------------------------------------|----------------------------|
 | **Requisito Referente**              | (RF-006)            |
@@ -33,6 +36,7 @@ Os testes de software são essenciais para garantir a qualidade, confiabilidade 
 | 1. Acessar uma lista de compras existente. | O sistema deve permitir ao usuário escolher uma lista de compras previamente criada. |
 | 2. Verificar se o sistema exibe o total de despesas atualizado com base nos itens da lista. | O sistema deve calcular o total de despesas corretamente e exibi-lo de forma clara e legível para o usuário. |
 | 3. Adicionar ou remover itens da lista e verificar se o total de despesas é atualizado adequadamente. | Após adicionar ou remover itens da lista, o total de despesas deve ser recalculado e exibido corretamente. |
+
 
 | **Caso de Teste 4: Interface Intuitiva** |                            |
 |--------------------------------------|----------------------------|
