@@ -1,11 +1,23 @@
 # Plano de Testes de Usabilidade
 
-O teste de usabilidade permite avaliar a qualidade da interface com o usuário da aplicação interativa. O Plano de Testes de Software é gerado a partir da especificação do sistema e consiste em casos de testes que deverão ser executados quando a implementação estiver parcial ou totalmente pronta.
+Os testes de usabilidade são importantes em nosso software para garantir que os usuários possam interagir de forma eficaz e intuitiva com todas as funcionalidades do aplicativo, proporcionando uma experiência positiva e satisfatória.
 
-As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Testes de Usabilidade".
+### Plano de Teste 1: Inserção de Dados 
+  
+- Objetivo: Avaliar a facilidade de inserção de informações no aplicativo de lista de compras. 
+- Tarefa: Solicitar aos usuários para criar uma nova lista de compras e adicionar itens à mesma. 
 
-> **Links Úteis**:
-> - [Teste De Usabilidade: O Que É e Como Fazer Passo a Passo (neilpatel.com)](https://neilpatel.com/br/blog/teste-de-usabilidade/)
-> - [Teste de usabilidade: tudo o que você precisa saber! | by Jon Vieira | Aela.io | Medium](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
-> - [Planejando testes de usabilidade: o que (e o que não) fazer | iMasters](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+ Critérios de sucesso: 
+ - Os usuários conseguem adicionar itens à lista de compras de maneira rápida e sem erros. 
+ - O sistema oferece orientações claras sobre como adicionar itens à lista.
+ - Os usuários podem editar ou remover itens da lista facilmente.
+
+ ### Plano de Teste 2:  Comparação de Preços 
+
+- Objetivo: Avaliar a facilidade e eficácia da funcionalidade de comparação de preços do aplicativo.
+- Tarefa: Solicitar aos usuários para selecionar um item na lista de compras e comparar os preços entre diferentes estabelecimentos. 
+
+Critérios de sucesso: 
+ - Os usuários conseguem acessar facilmente a funcionalidade de comparação de preços.
+ - O sistema apresenta os preços dos itens de forma clara e organizada para cada estabelecimento.
+ - Os usuários conseguem realizar a comparação de preços de maneira intuitiva e sem dificuldades.
