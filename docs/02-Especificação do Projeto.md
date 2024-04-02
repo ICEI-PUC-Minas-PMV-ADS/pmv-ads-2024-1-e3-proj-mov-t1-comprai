@@ -171,23 +171,14 @@ As personas levantadas durante o processo de entendimento do problema são apres
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
-
+As listas de compras em papel carecem de organização, dificultam o acesso e exigem gestão manual. No modelo atual, os consumidores escrevem e riscam itens em papel, resultando em compras desorganizadas e perda de informações. A proposta é um aplicativo de lista de compras que oferece uma interface intuitiva, acesso em qualquer lugar, atualização em tempo real, sugestões inteligentes e histórico de compras para uma experiência mais conveniente e eficiente.
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+### Processo 1 – Criação de Lista de Compras
 
-### Processo 1 – NOME DO PROCESSO
+Oportunidades de Melhoria: Introdução de um sistema digital para criar e gerenciar listas de compras, automação da adição de itens e valores, implementação de armazenamento de histórico de compras.
+![Processo 1]()
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
-
-![Processo 1](img/02-bpmn-proc1.png)
-
-### Processo 2 – NOME DO PROCESSO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Processo 2](img/02-bpmn-proc2.png)
 
 ## Indicadores de Desempenho 
 
