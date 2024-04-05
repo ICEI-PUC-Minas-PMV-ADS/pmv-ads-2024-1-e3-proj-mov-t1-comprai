@@ -26,7 +26,12 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+Banco de dados
+Todo:
+
+[ ] Adicionar demais querrys conforme andamento do projeto.
+
+<img src="../src/BD/DBComprai.png">
 
 ## Tecnologias Utilizadas
 
