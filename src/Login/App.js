@@ -1,12 +1,25 @@
 import react from 'react';
-import { Text, SafeAreaView, StyleSheet, Button } from 'react-native';
+import { Text, SafeAreaView, StyleSheet, Button, TextInput, View } from 'react-native';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.paragraph}>
-        Tela Home
+        Login
       </Text>
+
+      <View style={styles.loginContainer}>
+      <Text>Login</Text>
+      <TextInput style={styles.input}></TextInput>
+      <Text>senha</Text>
+      <TextInput style={styles.input}></TextInput>
+      </View>
+
+      <Button
+        title={'Fazer Login'}
+        color={'blue'}
+        onPress={() => {}}
+      />
 
     </SafeAreaView>
   );
@@ -20,9 +33,17 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   paragraph: {
-    margin: 24,
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  input: {
+    height: 25,
+    padding: 15,
+  },
+  loginContainer: {
+    padding: 18,
+    margin: 15,
+    marginBottom: 15, 
+  }
 });
