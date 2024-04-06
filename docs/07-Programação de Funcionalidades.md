@@ -37,3 +37,17 @@ Todo:
 [ ] Adicionar rota no botão fazendo levar pra tela home
 
 <img src="../src/Login/assets/teste.gif">
+
+# Tela de Listas Criadas
+Sendo desenvolvida por Pedro Henrique Filgueiras Couto.
+Tela de listas já criadas pelo usuário no app junto ao botão que retorna a tela principal, criado no 
+ambiente expo, conforme o primeiro modulo do Microfundamento de Desenvolvimento Mobile.
+
+
+### Todo: 
+
+[ ] Fazer com que a lista seja demonstrada ao clicar no registro selecionado.
+
+<br>
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/blob/main/src/My-Lists/assets/my-lists.gif">
