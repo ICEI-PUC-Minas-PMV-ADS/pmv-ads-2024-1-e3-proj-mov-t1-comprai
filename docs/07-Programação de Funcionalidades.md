@@ -21,7 +21,7 @@ Desenvolvido por Philippe Ribeiro Mesquita, a tela onboarding é a primeira tela
 
 ### ToDo:
 
-- [ ] Integrar a função do botão "Vamos Começar" à tela de login.
+- [ ] Integrar a função do botão "Vamos Começar" à tela de login
 
 ![Gif Tela Onboarding](img/Gif-Tela-Onboarding.gif)
 
