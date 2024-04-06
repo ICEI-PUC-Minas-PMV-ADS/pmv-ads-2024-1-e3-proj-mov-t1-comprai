@@ -4,7 +4,7 @@ import { Text, SafeAreaView, StyleSheet, Button } from 'react-native';
 export default function Onboarding() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={{paddingBottom: 30, fontSize: 18, fontWeight: 'bold'}}>
+      <Text style={styles.text}>
         Tela Onboarding!
       </Text>
       <Button color='#224261' title='Vamos Começar'/>
@@ -19,4 +19,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#FFF',
   },
+  text: {
+    paddingBottom: 30,
+    fontSize: 18,
+    fontWeight: 'bold'
+  }
 });
