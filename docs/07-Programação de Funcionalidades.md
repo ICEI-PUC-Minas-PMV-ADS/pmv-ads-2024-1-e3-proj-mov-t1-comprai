@@ -50,4 +50,4 @@ ambiente expo, conforme o primeiro modulo do Microfundamento de Desenvolvimento 
 
 <br>
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/blob/main/src/My-Lists/assets/my-lists.gif">
+<img src="../src/My-Lists/assets/my-lists.gif">
