@@ -50,4 +50,12 @@ ambiente expo, conforme o primeiro modulo do Microfundamento de Desenvolvimento 
 
 <br>
 
-<img src="../src/My-Lists/assets/my-lists.gif">
+<img src="../src/My-Lists/assets/my-lists.gif"> 
+
+
+# Profile 
+  
+  Sendo desenvolvido por João Gabriel.
+  Tela de perfil do usuário.
+
+<img src='../src/Profile/assets/Print.jpg'>
