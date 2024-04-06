@@ -65,3 +65,12 @@ ambiente expo, conforme o primeiro modulo do Microfundamento de Desenvolvimento 
   Tela de perfil do usuário.
 
 <img src='../src/Profile/assets/Print.jpg'>
+
+# Tela de Cadastro de Usuario
+Sendo desenvolvida por Rafael Santana de Oliveira
+
+Tela de cadastro de novos usuarios, sendo composta por 3 inputs nome, email e senha, e contendo um botão para realizar o envio do
+cadastro do usuario.Caso o usuario já tenha se registrando dentro do app e possivel ir para a tela de login pelo link abaixo do 
+botão de "Cadastrar".
+
+<img src="../src/Create-Account/telaCadastroUsuario.jpeg">
