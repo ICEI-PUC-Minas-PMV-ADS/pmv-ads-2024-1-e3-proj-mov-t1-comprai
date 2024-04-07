@@ -74,3 +74,10 @@ cadastro do usuario.Caso o usuario já tenha se registrando dentro do app e poss
 botão de "Cadastrar".
 
 <img src="../src/Create-Account/telaCadastroUsuario.jpeg">
+
+# Tela Home
+Sendo desenvolvida por Allan Cesar Amaral Gomes
+
+Tela Home do aplicativo Compraí, consiste na página principal da aplicação. A página deve conter um botão acessível indicando a criação de uma nova lista, além das opções para alternar entre as abas Página Principal(Home), Minhas Listas e Perfil.
+
+<img src="../src/Home/telaHome.png">
