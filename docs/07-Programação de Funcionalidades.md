@@ -46,8 +46,8 @@ Tela Lista de compra do app apenas com o título da pagina, criado no ambiente e
 
 # Tela de Listas Criadas
 Sendo desenvolvida por Pedro Henrique Filgueiras Couto.
-Tela de listas já criadas pelo usuário no app junto ao botão que retorna a tela principal, criado no 
-ambiente expo, conforme o primeiro modulo do Microfundamento de Desenvolvimento Mobile.
+Atualização etapa 3 programação de uma funcionalidade de leitura de arquivo json e apresentação em tela do Nome das listas.
+Ao clicar em cada lista o botão derruba o sistema pois a lógica de abertura de listas ainda não foi implementada.
 
 
 ### Todo: 
@@ -56,7 +56,7 @@ ambiente expo, conforme o primeiro modulo do Microfundamento de Desenvolvimento 
 
 <br>
 
-<img src="../src/My-Lists/assets/my-lists.gif"> 
+<img src="./img/My-Lists.jpg"> 
 
 
 # Profile 

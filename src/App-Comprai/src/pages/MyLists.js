@@ -13,6 +13,7 @@ export default function MyLists({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
+      <Text style={styles.title}>Minhas Listas</Text>
         <FlatList
           data={jsonData}
           keyExtractor={(item, index) => index.toString()}
