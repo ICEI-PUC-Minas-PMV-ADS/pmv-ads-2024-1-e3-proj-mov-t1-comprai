@@ -26,11 +26,13 @@ Todo:
 
 <img src="../docs/img/teste.gif">
 
+<br>
+
 Implementei uma tela de login com estilos os estilos do Figma, além de uma solução de roteamento que direciona os usuários para a tela inicial de forma eficaz. Agora, minha próxima etapa é resolver o processo de autenticação, que envolve a leitura de dados da API do servidor JSON.
 
-<video  width="1024" height="900" controls>
-<source src="../docs/img/funcionalidadeLogin.mp4" type="video/mp4">
-</video>
+<br>
+
+<img src="../docs/img/loginFuncionalidade.gif">
 
 # Tela de Lista de compra
 
