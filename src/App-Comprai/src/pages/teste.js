@@ -10,6 +10,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 
 import PrimaryButton from "../components/PrimaryButton";
+
 export default function Login({ navigation }) {
   const [hidePassword, setHidePassword] = useState(true);
 
@@ -20,22 +21,22 @@ export default function Login({ navigation }) {
 
         <View style={styles.mainInput}>
           <View style={styles.label}>
-            <Ionicons icon name="mail-outline" size={15}></Ionicons>
+            <Ionicons name={"mail-outline"} size={15} />
             <Text style={styles.textLabel}>Seu E-mail</Text>
           </View>
 
-          <TextInput style={styles.input} placeholder="Digite seu E-mail" />
+          <TextInput style={styles.input} placeholder="Insira seu e-mail" />
 
           <View style={styles.label}>
-            <Ionicons icon name="lock-closed-outline" size={15}></Ionicons>
-            <Text style={styles.textLabel}>Senha</Text>
+            <Ionicons name={"lock-closed-outline"} size={15} />
+            <Text style={styles.textLabel}>Sua Senha</Text>
           </View>
 
           <View style={styles.inputPassword}>
             <TextInput
               style={styles.input}
+              placeholder="Insira sua senha"
               secureTextEntry={hidePassword}
-              placeholder="Digite a sua senha"
             />
             <TouchableOpacity
               onPress={() => setHidePassword(!hidePassword)}
@@ -50,16 +51,15 @@ export default function Login({ navigation }) {
           </View>
         </View>
 
-        <PrimaryButton
-          title={"Entrar"}
-          onPress={() => {
-            navigation.navigate("Home");
-          }}
-        />
+        <TouchableOpacity onPress={() => {}}>
+          <Text style={styles.span}>Esqueceu a Senha?</Text>
+        </TouchableOpacity>
+
+        <PrimaryButton title={"Entrar"} onPress={() => {}} />
 
         <View style={styles.linkCreate}>
           <View>
-            <Text>Não possui conta?</Text>
+            <Text>NÃ£o possui contar?</Text>
           </View>
 
           <TouchableOpacity
@@ -76,6 +76,7 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#FFF",
   },
   content: {
     flex: 1,
@@ -83,14 +84,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
+    width: "90%",
     fontSize: 24,
-    color: "#333333",
-    marginBottom: 30,
-    fontFamily: "Roboto",
-    color: "#2B7C7D",
     fontWeight: "bold",
-    marginLeft: 20,
-    alignSelf: "flex-start",
+    textAlign: "left",
+    color: "#2B7C7D",
+    marginBottom: 25,
   },
   mainInput: {
     alignItems: "center",
@@ -111,16 +110,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 5,
     textAlign: "left",
-    fontSize: 14,
+    fontSize: 12,
     marginLeft: 10,
   },
   textLabel: {
-    fontSize: 14,
-  },
-  inputPassword: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    fontSize: 12,
   },
   span: {
     color: "#2196F3",
@@ -130,5 +124,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 5,
     marginTop: 45,
+  },
+  inputPassword: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
 });
