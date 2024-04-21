@@ -82,4 +82,5 @@ Tela Home do aplicativo Compraí, consiste na página principal da aplicação. 
 
 OBS: Recebeu atualizações em interface com inserção de estilos para a etapa 3.
 
+<img src="../docs/img/Tela-Home(Etapa-3).png">
 <img src="../docs/img/Tela Home (Etapa 3).jpeg">
