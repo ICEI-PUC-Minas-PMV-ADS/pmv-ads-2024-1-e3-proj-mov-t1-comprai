@@ -10,9 +10,7 @@ Desenvolvido por Philippe Ribeiro Mesquita, a tela onboarding é a primeira tela
 
 Para a entrega da etapa 3, realizei a estilização da tela de Onboarding e implementei a funcionalidade do botão ‘Vamos Começar’ para a tela de Login. Além disso, fiz a integração da navegação entre as páginas.
 
-<video controls>
-    <source src="../docs/img/video-tela-onboarding.mp4" type="video/mp4">
-</video>
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/assets/97925429/d0d774bf-4754-41da-adf0-c4ac0ad44dc1
 
 # Tela de Login
 Sendo desenvolvida por Mahavishnu Jneesh Afonso.
