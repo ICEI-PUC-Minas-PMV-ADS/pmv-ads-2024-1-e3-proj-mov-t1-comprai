@@ -80,4 +80,6 @@ Sendo desenvolvida por Allan Cesar Amaral Gomes
 
 Tela Home do aplicativo Compraí, consiste na página principal da aplicação. A página deve conter um botão acessível indicando a criação de uma nova lista, além das opções para alternar entre as abas Página Principal(Home), Minhas Listas e Perfil.
 
-<img src="../src/Home/telaHome.png">
+OBS: Recebeu atualizações em interface com inserção de estilos para a etapa 3.
+
+<img src="../docs/img/Tela Home (Etapa 3).jpeg">
