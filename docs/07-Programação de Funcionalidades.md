@@ -28,10 +28,7 @@ Todo:
 
 Implementei uma tela de login com estilos os estilos do Figma, além de uma solução de roteamento que direciona os usuários para a tela inicial de forma eficaz. Agora, minha próxima etapa é resolver o processo de autenticação, que envolve a leitura de dados da API do servidor JSON.
 
-<viideo  width="320" height="240" controls> 
-<source src="../docs/img/funcionalidadeLogin.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/blob/main/docs/img/funcionalidadeLogin.mp4
 
 # Tela de Lista de compra
 
