@@ -1,12 +1,11 @@
 import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableOpacity } from 'react-native';
+import FormExample from "../components/form/form"
 
 export default function CreateAccount({ navigation }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <Text style={styles.title}>Página criar uma nova conta</Text>
-      </View>
+      <FormExample />
     </SafeAreaView >
   );
 }
