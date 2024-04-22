@@ -1,14 +1,22 @@
-import { StyleSheet, Text, View, SafeAreaView} from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Button, Alert, Appbar} from 'react-native';
 
-export default function Profile() {
 
+ export default function Profile() {
+ 
   return (
+  <>
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Página Profile</Text>
-      </View>
-    </SafeAreaView >
-  );
+        <Text style={styles.title}>Nome</Text>
+        <Text style={styles.title}>Email</Text>
+        <Text style={styles.title}>Senha</Text> 
+        <Button
+        title="Salvar"
+        onPress={() => Alert.alert('Simple Button pressed')}/>
+      </View> 
+     </SafeAreaView>
+  </>   
+);
 }
 
 const styles = StyleSheet.create({
@@ -26,3 +34,5 @@ const styles = StyleSheet.create({
     color: '#2B7C7D'
   },
 });
+
+
