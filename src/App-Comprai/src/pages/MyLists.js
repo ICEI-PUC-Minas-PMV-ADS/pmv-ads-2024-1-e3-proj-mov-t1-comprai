@@ -39,17 +39,19 @@ export default function MyLists({ navigation }) {
       </View>
     </SafeAreaView>
   );
-  const handleListItemPress = (item) => {
-    console.log("Você clicou em:", item.nome);
-  };
-  {
-    return (
-      <View style={styles.container}>
-        <View style={styles.listContainer}>{renderJsonData()}</View>
-      </View>
-    );
-  }
+  
+  // {
+  //   return (
+  //     <View style={styles.container}>
+  //       <View style={styles.listContainer}>{renderJsonData()}</View>
+  //     </View>
+  //   );
+  // }
 }
+
+const handleListItemPress = (item) => {
+  console.log("Você clicou em:", item.nome);
+};
 
 const styles = StyleSheet.create({
   container: {
