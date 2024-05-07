@@ -8,7 +8,7 @@ export default function CardItem({ name, qnt, value, onPress }) {
       </View>
       <View style={styles.body}>
         <Text style={styles.text}>Qnt: {qnt}</Text>
-        <Text style={styles.text}>R$ {value}</Text>
+        <Text style={styles.text}>{value}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -33,5 +33,5 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     color: "white",
-  }
+  },
 });
