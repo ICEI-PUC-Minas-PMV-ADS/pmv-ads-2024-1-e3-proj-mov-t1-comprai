@@ -58,12 +58,19 @@ Ao clicar em cada lista o botão derruba o sistema pois a lógica de abertura de
 
 <img src="./img/My-Lists.jpg">
 
-# Profile
+# Tela de Perfil do Usuario
 
 Sendo desenvolvido por João Gabriel.
-Tela de perfil do usuário.
 
-<img src='../docs/img/Print.jpg'>
+Tela de perfil do usuário. Foram desenvolvido as partes de inserir nome, o e-mail e a senha.
+Não consegui criar uma funcionalidade de mostrar a senha, o botão ''salvar'' não está funcional.
+
+
+![tela usuario](./img/tela_perfil.jpeg)
+
+
+
+
 
 # Tela de Cadastro de Usuario
 
