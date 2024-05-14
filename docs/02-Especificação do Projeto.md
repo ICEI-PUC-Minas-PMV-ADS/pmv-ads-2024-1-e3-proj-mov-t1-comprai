@@ -179,6 +179,8 @@ As listas de compras em papel carecem de organização, dificultam o acesso e ex
 Oportunidades de Melhoria: Introdução de um sistema digital para criar e gerenciar listas de compras, automação da adição de itens e valores, implementação de armazenamento de histórico de compras.
 ![Processo 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/blob/main/docs/img/bpmnGerProj.png)
 
+Com um aplicativo de lista de compras, os usuários podem planejar suas compras de forma precisa, evitando esquecimentos e compras desnecessárias. Essa ferramenta permite criar listas personalizadas, controlar quantidades e preços, resultando em uma experiência de compra mais organizada e financeiramente consciente. Simplifica o processo de compra, economizando tempo, dinheiro e reduzindo o estresse.
+
 
 ## Indicadores de Desempenho 
 
