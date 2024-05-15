@@ -179,10 +179,14 @@ As listas de compras em papel carecem de organização, dificultam o acesso e ex
 Oportunidades de Melhoria: Introdução de um sistema digital para criar e gerenciar listas de compras, automação da adição de itens e valores, implementação de armazenamento de histórico de compras.
 ![Processo 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/blob/main/docs/img/bpmnGerProj.png)
 
+Com um aplicativo de lista de compras, os usuários podem planejar suas compras de forma precisa, evitando esquecimentos e compras desnecessárias. Essa ferramenta permite criar listas personalizadas, controlar quantidades e preços, resultando em uma experiência de compra mais organizada e financeiramente consciente. Simplifica o processo de compra, economizando tempo, dinheiro e reduzindo o estresse.
+
 
 ## Indicadores de Desempenho 
 
 ![Indicadores de Desempenho](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/blob/main/docs/img/Indicador-Desempenho-Comprai.jpg)
+Os indicadores de desempenho influenciam diretamente a experiência do usuário. Um processo rápido de criação de lista de compras, um sistema responsivo e sessões de uso prolongadas garantem uma interação fluida e satisfatória. Lembretes eficazes e uma alta taxa de conclusão de compras tornam a experiência de compra mais organizada e eficiente. Esses indicadores não apenas fornecem insights sobre o desempenho do sistema, mas também melhoram significativamente a vida dos usuários.
+
 
 ## Requisitos
 

@@ -44,7 +44,7 @@ export default function Login({ navigation }) {
         <PrimaryButton
           title={"Entrar"}
           onPress={() => {
-            navigation.navigate("Home");
+            navigation.navigate("Tabs");
           }}
         />
 
