@@ -8,8 +8,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import Input from "../components/Input";
 
 import PrimaryButton from "../components/PrimaryButton";
+import Label from "../components/Label";
 export default function Login({ navigation }) {
   const [hidePassword, setHidePassword] = useState(true);
 
@@ -19,24 +21,13 @@ export default function Login({ navigation }) {
         <Text style={styles.title}>Login</Text>
 
         <View style={styles.mainInput}>
-          <View style={styles.label}>
-            <Ionicons icon name="mail-outline" size={15}></Ionicons>
-            <Text style={styles.textLabel}>Seu E-mail</Text>
-          </View>
+          <Label label="Seu E-mail" iconName="mail-outline" iconSize={15} />
+          <Input label="Email" placeholder="Digite seu email" />
 
-          <TextInput style={styles.input} placeholder="Digite seu E-mail" />
-
-          <View style={styles.label}>
-            <Ionicons icon name="lock-closed-outline" size={15}></Ionicons>
-            <Text style={styles.textLabel}>Senha</Text>
-          </View>
-
+          <Label label="Senha" iconName="lock-closed-outline" iconSize={15} />
           <View style={styles.inputPassword}>
-            <TextInput
-              style={styles.input}
-              secureTextEntry={hidePassword}
-              placeholder="Digite a sua senha"
-            />
+            <Input placeholder="Digite a sua senha" secureTextEntry={hidePassword} />
+
             <TouchableOpacity
               onPress={() => setHidePassword(!hidePassword)}
               style={{ position: "absolute", right: 20, top: 22 }}
@@ -84,7 +75,6 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    color: "#333333",
     marginBottom: 30,
     fontFamily: "Roboto",
     color: "#2B7C7D",
@@ -104,18 +94,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     width: "100%",
     marginBottom: 25,
-  },
-  label: {
-    width: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 5,
-    textAlign: "left",
-    fontSize: 14,
-    marginLeft: 10,
-  },
-  textLabel: {
-    fontSize: 14,
   },
   inputPassword: {
     flexDirection: "row",
