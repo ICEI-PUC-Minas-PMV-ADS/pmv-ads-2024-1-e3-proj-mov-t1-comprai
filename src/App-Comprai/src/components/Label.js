@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 
 const Label = ({ iconName, iconSize, label }) => {
-    console.log(iconName)
+    // console.log(iconName)
     return (
         <View style={styles.label}>
             <Ionicons icon name={iconName} size={iconSize}></Ionicons>
