@@ -6,7 +6,7 @@ import Label from '../components/Label';
 import PrimaryButton from '../components/PrimaryButton';
 
 import { Ionicons } from "@expo/vector-icons";
-
+import { register } from "../services/Auth.services";
 export default function CreateAccount({ navigation }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -14,15 +14,23 @@ export default function CreateAccount({ navigation }) {
 
   const [hidePassword, setHidePassword] = useState(true);
 
-  const handlePress = () => {
-    Alert.alert('Atenção!', 'Cadastro não efetuado. Tente novamente mais tarde!')
-  };
-
   const handleSubmit = () => {
-    // Handle form submission here
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Password:', password);
+    register({
+      name: name,
+      email: email,
+      password: password
+    }).then(res => {
+      console.log(res)
+
+      if (res) {
+        Alert.alert('Atenção', 'usuario cadastrado com sucesso', [
+          { text: "OK", onPress: () => navigation.goBack() }
+        ])
+
+      } else {
+        Alert.alert('Atenção', 'usuario NÂO cadastrado')
+      }
+    });
   };
 
   return (
@@ -71,7 +79,7 @@ export default function CreateAccount({ navigation }) {
 
         <PrimaryButton
           title="Cadastrar"
-          onPress={handlePress}
+          onPress={handleSubmit}
         />
 
         <View style={styles.linkLogin}>

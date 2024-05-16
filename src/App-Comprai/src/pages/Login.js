@@ -10,10 +10,32 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import Input from "../components/Input";
 
+import { login } from '../services/Auth.services'
 import PrimaryButton from "../components/PrimaryButton";
 import Label from "../components/Label";
 export default function Login({ navigation }) {
   const [hidePassword, setHidePassword] = useState(true);
+  const [email, setEmail] = useState('Due.John@gmail.com');
+  const [password, setPassword] = useState('teste');
+
+  const handleLogin = () => {
+    console.log('chamou')
+    login({
+      email: email,
+      password: password
+    }).then(res => {
+      console.log(res);
+
+      if (res && res.user) {
+        console.log(res.user.name)
+        // setName(res.user.name)
+        navigation.navigate("Tabs");
+      } else {
+        Alert.alert("Atenção", 'Usuario ou senha invalidos!')
+      }
+    })
+  }
+
 
   return (
     <SafeAreaView style={styles.container}>
@@ -22,11 +44,11 @@ export default function Login({ navigation }) {
 
         <View style={styles.mainInput}>
           <Label label="Seu E-mail" iconName="mail-outline" iconSize={15} />
-          <Input label="Email" placeholder="Digite seu email" />
+          <Input label="Email" value={email} onChangeText={(text) => setEmail(text)} placeholder="Digite seu email" />
 
           <Label label="Senha" iconName="lock-closed-outline" iconSize={15} />
           <View style={styles.inputPassword}>
-            <Input placeholder="Digite a sua senha" secureTextEntry={hidePassword} />
+            <Input placeholder="Digite a sua senha" onChangeText={(text) => setPassword(text)} value={password} secureTextEntry={hidePassword} />
 
             <TouchableOpacity
               onPress={() => setHidePassword(!hidePassword)}
@@ -43,9 +65,7 @@ export default function Login({ navigation }) {
 
         <PrimaryButton
           title={"Entrar"}
-          onPress={() => {
-            navigation.navigate("Tabs");
-          }}
+          onPress={handleLogin}
         />
 
         <View style={styles.linkCreate}>
