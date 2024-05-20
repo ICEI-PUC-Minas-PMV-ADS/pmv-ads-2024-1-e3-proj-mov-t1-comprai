@@ -1,1 +1,1 @@
-export const Base_URL = "https://faceiroapi.onrender.com"
+export const Base_URL = "https://app-sxt72utq3mvvy.azurewebsites.net/"

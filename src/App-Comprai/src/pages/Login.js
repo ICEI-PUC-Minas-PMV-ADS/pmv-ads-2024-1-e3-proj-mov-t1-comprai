@@ -13,10 +13,15 @@ import Input from "../components/Input";
 import { login } from '../services/Auth.services'
 import PrimaryButton from "../components/PrimaryButton";
 import Label from "../components/Label";
+import { useUser } from "../contexts/UseContexts";
+
+
 export default function Login({ navigation }) {
   const [hidePassword, setHidePassword] = useState(true);
   const [email, setEmail] = useState('Due.John@gmail.com');
   const [password, setPassword] = useState('teste');
+  const { setSigned, setName } = useUser();
+
 
   const handleLogin = () => {
     console.log('chamou')
@@ -28,8 +33,8 @@ export default function Login({ navigation }) {
 
       if (res && res.user) {
         console.log(res.user.name)
-        // setName(res.user.name)
-        navigation.navigate("Tabs");
+        setName(res.user.name)
+        setSigned(true)
       } else {
         Alert.alert("Atenção", 'Usuario ou senha invalidos!')
       }
