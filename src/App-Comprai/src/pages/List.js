@@ -11,8 +11,8 @@ const f = new Intl.NumberFormat("pt-BR", {
 
 export default function List({ navigation, route }) {
   const { nome } = route.params;
-  let { listaInicial } = route.params;
-  const [listaState, setListaState] = useState(listaInicial);
+  const { listaInicial } = route.params;
+  const [lista, setLista] = useState(listaInicial);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -20,7 +20,7 @@ export default function List({ navigation, route }) {
         <Text style={styles.title}>{nome}</Text>
         <FlatList
           style={styles.flatList}
-          data={listaState}
+          data={lista}
           renderItem={({ item }) => (
             <CardItem
               name={item.itemNome}
@@ -31,7 +31,7 @@ export default function List({ navigation, route }) {
                 item.itemChecado = !item.itemChecado
                 navigation.navigate("List", {
                   nome: nome,
-                  lista: listaState,
+                  listaInicial: lista,
                 })
               }}
             />
@@ -40,7 +40,7 @@ export default function List({ navigation, route }) {
         <View style={styles.totalPriceContainer}>
           <Text style={styles.totalPriceValue}>Valor total:</Text>
           <Text style={styles.totalPriceValue}>
-            {f.format(calculeTotalPrice(listaState))}
+            {f.format(calculeTotalPrice(lista))}
           </Text>
         </View>
         <View style={styles.positionButton}>
@@ -54,10 +54,10 @@ export default function List({ navigation, route }) {
                 itemPreco: 2.5,
                 itemQuantidade: 1,
               });
-              setListaState(lista);
+              setLista(lista);
               navigation.navigate("List", {
                 nome: nome,
-                lista: listaState,
+                listaInicial: lista,
               })
             }}
           />

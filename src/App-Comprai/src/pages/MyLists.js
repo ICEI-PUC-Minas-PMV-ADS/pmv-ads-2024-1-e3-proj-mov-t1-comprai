@@ -24,7 +24,7 @@ export default function MyLists({ navigation }) {
               onPress={() =>
                 navigation.navigate("List", {
                   nome: item.nome,
-                  lista: item.lista,
+                  listaInicial: item.lista,
                 })
               }
             >
@@ -50,7 +50,7 @@ export default function MyLists({ navigation }) {
               
               navigation.navigate("List", {
                 nome: myList[id].nome,
-                lista: myList[id].lista,
+                listaInicial: myList[id].lista,
               });
             }}
           />
