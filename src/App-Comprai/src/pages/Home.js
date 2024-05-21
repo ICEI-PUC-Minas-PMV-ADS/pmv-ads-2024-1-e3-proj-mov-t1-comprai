@@ -38,5 +38,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 31,
     fontWeight: 'bold'
+  },
+  mainLogo:{
+    marginTop: 46,
   }
 });
