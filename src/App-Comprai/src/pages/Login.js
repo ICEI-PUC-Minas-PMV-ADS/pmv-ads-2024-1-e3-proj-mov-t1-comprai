@@ -15,8 +15,8 @@ import PrimaryButton from "../components/PrimaryButton";
 import Label from "../components/Label";
 export default function Login({ navigation }) {
   const [hidePassword, setHidePassword] = useState(true);
-  const [email, setEmail] = useState('Due.John@gmail.com');
-  const [password, setPassword] = useState('teste');
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
   const handleLogin = () => {
     console.log('chamou')

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -10,15 +11,23 @@ import CustomButton from "../components/CustomButton";
 import jsonData from "../DB/listas.json";
 
 export default function MyLists({ navigation }) {
+  const [myList, setMyList] = useState(jsonData);
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Minhas Listas</Text>
         <FlatList
-          data={jsonData}
-          keyExtractor={(item, index) => index.toString()}
+          data={myList}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => handleListItemPress(item)}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("List", {
+                  nome: item.nome,
+                  lista: item.lista,
+                })
+              }
+            >
               <View style={styles.itemContainer}>
                 <Text style={styles.itemText}>{item.nome}</Text>
               </View>
@@ -26,32 +35,30 @@ export default function MyLists({ navigation }) {
           )}
           contentContainerStyle={styles.listContent}
         />
-
         <View style={styles.positionButton}>
           <CustomButton
             title={"Nova Lista"}
             icon={"add"}
             onPress={() => {
-              navigation.navigate("List");
+              let id = myList.length
+              jsonData.push({
+                id: id + 1,
+                nome: `Teste ${id + 1}`,
+                lista: [],
+              });
+              setMyList(jsonData);
+              
+              navigation.navigate("List", {
+                nome: myList[id].nome,
+                lista: myList[id].lista,
+              });
             }}
           />
         </View>
       </View>
     </SafeAreaView>
   );
-  
-  // {
-  //   return (
-  //     <View style={styles.container}>
-  //       <View style={styles.listContainer}>{renderJsonData()}</View>
-  //     </View>
-  //   );
-  // }
 }
-
-const handleListItemPress = (item) => {
-  console.log("Você clicou em:", item.nome);
-};
 
 const styles = StyleSheet.create({
   container: {
