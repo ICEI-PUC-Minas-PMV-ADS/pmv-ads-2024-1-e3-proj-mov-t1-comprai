@@ -7,7 +7,7 @@ const MeuPerfil = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
+
 
 
   const CustomLabel = ({ label, iconName }) => (
@@ -33,7 +33,7 @@ const MeuPerfil = () => {
         labelStyle={styles.inputLabel}
       />
       <Input
-        label={<CustomLabel label="E-mail" iconName="email"/>}
+        label={<CustomLabel label="E-mail" iconName="email" />}
         placeholder="Digite seu E-mail"
         value={email}
         onChangeText={setEmail}
@@ -49,13 +49,13 @@ const MeuPerfil = () => {
         value={password}
         onChangeText={setPassword}
         autoCapitalize="none"
-        secureTextEntry 
+        secureTextEntry
         containerStyle={styles.inputContainer}
         inputContainerStyle={styles.inputBox}
         labelStyle={styles.inputLabel}
       />
       <Button
-        title="Salvar" 
+        title="Salvar"
         iconName={"archive"} //não consegui colocar 
         onPress={() => Alert.alert('Alterações salvas')}
         buttonStyle={[styles.saveButton, { backgroundColor: '#224261' }]}
@@ -77,9 +77,9 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'left',
-    color: '#2B7C7D', 
-    fontFamily: 'Roboto', 
-    height: 30, 
+    color: '#2B7C7D',
+    fontFamily: 'Roboto',
+    height: 30,
   },
   inputContainer: {
     marginBottom: 20,
@@ -93,9 +93,9 @@ const styles = StyleSheet.create({
   },
   saveButton: {
     marginTop: 20,
-    height: 55, 
-    width: 350, 
-    borderRadius: 30, 
+    height: 55,
+    width: 350,
+    borderRadius: 30,
   },
   labelContainer: {
     flexDirection: 'row',

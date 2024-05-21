@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import CustomButton from "../components/CustomButton";
 import CardItem from "../components/list/CardItem";
@@ -11,7 +11,8 @@ const f = new Intl.NumberFormat("pt-BR", {
 
 export default function List({ navigation, route }) {
   const { nome } = route.params;
-  const { lista } = route.params;
+  let { listaInicial } = route.params;
+  const [listaState, setListaState] = useState(listaInicial);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -19,7 +20,7 @@ export default function List({ navigation, route }) {
         <Text style={styles.title}>{nome}</Text>
         <FlatList
           style={styles.flatList}
-          data={lista}
+          data={listaState}
           renderItem={({ item }) => (
             <CardItem
               name={item.itemNome}
@@ -30,7 +31,7 @@ export default function List({ navigation, route }) {
                 item.itemChecado = !item.itemChecado
                 navigation.navigate("List", {
                   nome: nome,
-                  lista: lista,
+                  lista: listaState,
                 })
               }}
             />
@@ -39,7 +40,7 @@ export default function List({ navigation, route }) {
         <View style={styles.totalPriceContainer}>
           <Text style={styles.totalPriceValue}>Valor total:</Text>
           <Text style={styles.totalPriceValue}>
-            {f.format(calculeTotalPrice(lista))}
+            {f.format(calculeTotalPrice(listaState))}
           </Text>
         </View>
         <View style={styles.positionButton}>
@@ -53,9 +54,10 @@ export default function List({ navigation, route }) {
                 itemPreco: 2.5,
                 itemQuantidade: 1,
               });
+              setListaState(lista);
               navigation.navigate("List", {
                 nome: nome,
-                lista: lista,
+                lista: listaState,
               })
             }}
           />

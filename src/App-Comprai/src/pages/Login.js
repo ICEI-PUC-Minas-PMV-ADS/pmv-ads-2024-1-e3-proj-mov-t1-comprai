@@ -13,10 +13,16 @@ import Input from "../components/Input";
 import { login } from '../services/Auth.services'
 import PrimaryButton from "../components/PrimaryButton";
 import Label from "../components/Label";
+import { useUser } from "../contexts/UseContexts";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+
 export default function Login({ navigation }) {
   const [hidePassword, setHidePassword] = useState(true);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const { setSigned, setName } = useUser();
+
 
   const handleLogin = () => {
     console.log('chamou')
@@ -27,9 +33,9 @@ export default function Login({ navigation }) {
       console.log(res);
 
       if (res && res.user) {
-        console.log(res.user.name)
-        // setName(res.user.name)
-        navigation.navigate("Tabs");
+        setName(res.user.name)
+        AsyncStorage.setItem('@TOKEN', res.accessToken).then()
+        setSigned(true)
       } else {
         Alert.alert("Atenção", 'Usuario ou senha invalidos!')
       }
