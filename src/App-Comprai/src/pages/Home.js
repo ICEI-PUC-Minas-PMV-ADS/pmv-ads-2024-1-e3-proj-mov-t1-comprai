@@ -36,7 +36,7 @@ export default function Home() {
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            placeholder="Adicionar item"
+            placeholder="Adicionar mercados em destaque..."
             value={textInput}
             onChangeText={setTextInput}
           />
