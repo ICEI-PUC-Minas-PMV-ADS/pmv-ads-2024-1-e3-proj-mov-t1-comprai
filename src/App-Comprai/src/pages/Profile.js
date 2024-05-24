@@ -1,114 +1,104 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Text, Alert } from 'react-native';
-import { Input, Button, Icon } from 'react-native-elements';
+import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 
+import Input from '../components/Input';
+import Label from '../components/Label';
+
+import { Ionicons } from "@expo/vector-icons";
+
+import CustomButton from '../components/CustomButton';
 
 const MeuPerfil = () => {
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
-
-  const CustomLabel = ({ label, iconName }) => (
-    <View style={styles.labelContainer}>
-      <Icon name={iconName} size={20} color="black" style={styles.icon} />
-      <Text style={styles.label}>{label}</Text>
-    </View>
-  );
+  const [hidePassword, setHidePassword] = useState(true);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.titleContainer}>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.content}>
         <Text style={styles.title}>Meu Perfil</Text>
+
+        <View style={styles.mainInput}>
+          <Label label="Nome" iconName="person-outline" />
+          <Input
+            placeholder="Digite seu nome"
+            value={name}
+            onChangeText={setName}
+            autoCapitalize="none"
+          />
+          <Label label="Email" iconName="mail-outline" iconSize={15} />
+          <Input
+            placeholder="Digite seu E-mail"
+            value={email}
+            onChangeText={setEmail}
+            keyboardType="email-address"
+            autoCapitalize="none"
+          />
+
+          <Label label="Password" iconName="lock-closed-outline" iconSize={15} />
+          <View style={styles.inputPassword}>
+            <Input
+              placeholder="Digite sua senha"
+              value={password}
+              onChangeText={setPassword}
+              secureTextEntry={hidePassword}
+            />
+
+            <TouchableOpacity
+              onPress={() => setHidePassword(!hidePassword)}
+              style={{ position: "absolute", right: 20, top: 22 }}
+            >
+              <Ionicons
+                name={hidePassword ? "eye-off-outline" : "eye-outline"}
+                size={24}
+                color="black"
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <CustomButton title="Salvar" icon={'save'} onPress={() => {}}/>
+
       </View>
-      <Input
-        label={<CustomLabel label="Nome" iconName="person" />}
-        placeholder="Digite seu nome"
-        value={name}
-        onChangeText={setName}
-        autoCapitalize="none"
-        containerStyle={styles.inputContainer}
-        inputContainerStyle={styles.inputBox}
-        labelStyle={styles.inputLabel}
-      />
-      <Input
-        label={<CustomLabel label="E-mail" iconName="email" />}
-        placeholder="Digite seu E-mail"
-        value={email}
-        onChangeText={setEmail}
-        keyboardType="email-address"
-        autoCapitalize="none"
-        containerStyle={styles.inputContainer}
-        inputContainerStyle={styles.inputBox}
-        labelStyle={styles.inputLabel}
-      />
-      <Input
-        label={<CustomLabel label="Senha" iconName="lock" />}
-        placeholder="Insira sua senha"
-        value={password}
-        onChangeText={setPassword}
-        autoCapitalize="none"
-        secureTextEntry
-        containerStyle={styles.inputContainer}
-        inputContainerStyle={styles.inputBox}
-        labelStyle={styles.inputLabel}
-      />
-      <Button
-        title="Salvar"
-        iconName={"archive"} //não consegui colocar 
-        onPress={() => Alert.alert('Alterações salvas')}
-        buttonStyle={[styles.saveButton, { backgroundColor: '#224261' }]}
-      />
-    </View>
+    </SafeAreaView >
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    paddingHorizontal: 20,
   },
-  titleContainer: {
-    marginBottom: 20,
+  content: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    textAlign: 'left',
-    color: '#2B7C7D',
-    fontFamily: 'Roboto',
-    height: 30,
+    fontSize: 24,
+    marginBottom: 30,
+    fontFamily: "Roboto",
+    color: "#2B7C7D",
+    fontWeight: "bold",
+    marginLeft: 20,
+    alignSelf: "flex-start",
   },
-  inputContainer: {
-    marginBottom: 20,
-    width: '100%',
-  },
-  inputBox: {
-    borderColor: '#E0E0E0',
-    borderWidth: 1,
-    borderRadius: 0,
-    paddingHorizontal: 10,
-  },
-  saveButton: {
+  signInLink: {
+    textAlign: 'center',
     marginTop: 20,
-    height: 55,
-    width: 350,
-    borderRadius: 30,
+    textDecorationLine: 'underline',
+    color: 'blue',
   },
-  labelContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  mainInput: {
+    alignItems: "center",
+    width: "90%",
   },
-  label: {
-    marginLeft: 0,
-  },
-  icon: {
-    marginRight: 0,
-  },
-  inputLabel: {
-    fontSize: 10,
+  inputPassword: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
 });
 
