@@ -4,7 +4,6 @@ import {
   Text,
   View,
   SafeAreaView,
-  TextInput,
   TouchableOpacity,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
