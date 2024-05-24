@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity} from "react-native";
 import CustomButton from "../components/CustomButton";
 import jsonData from "../DB/listas.json";
+
+import { Ionicons } from "@expo/vector-icons"
 
 export default function MyLists({ navigation }) {
   const [myList, setMyList] = useState(jsonData);
@@ -30,10 +25,12 @@ export default function MyLists({ navigation }) {
             >
               <View style={styles.itemContainer}>
                 <Text style={styles.itemText}>{item.nome}</Text>
+                <TouchableOpacity >
+                  <Ionicons name={'ellipsis-vertical-outline'} size={24} color={'#FFF'} />
+                </TouchableOpacity>
               </View>
             </TouchableOpacity>
           )}
-          contentContainerStyle={styles.listContent}
         />
         <View style={styles.positionButton}>
           <CustomButton
@@ -47,7 +44,7 @@ export default function MyLists({ navigation }) {
                 lista: [],
               });
               setMyList(jsonData);
-              
+
               navigation.navigate("List", {
                 nome: myList[id].nome,
                 listaInicial: myList[id].lista,
@@ -68,11 +65,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    width: '90%'
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     color: "#2B7C7D",
+    paddingVertical: 20
   },
   positionButton: {
     position: "absolute",
@@ -84,15 +83,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#FFFFFF",
   },
-  listContainer: {
-    marginTop: 50,
-    width: "80%",
-  },
   itemContainer: {
-    backgroundColor: "#000000",
-    borderBottomWidth: 1,
+    backgroundColor: "#262424",
     borderBottomColor: "#FFFFFF",
-    padding: 20,
+    paddingVertical: 20,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    marginBottom: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%'
   },
   itemText: {
     fontSize: 18,
