@@ -92,3 +92,16 @@ OBS: Recebeu atualizações em interface com inserção de estilos para a etapa 
 
 <img src="../docs/img/Tela-Home(Etapa-3).png">
 <img src="../docs/img/Tela Home (Etapa 3).jpeg">
+
+* Atualizações Etapa 4
+
+**Tela Home** 
+Tela desenvolvida para o projeto principal do eixo.
+
+![Gif Tela Home Principal](img/Tela-Home-Principal.gif)
+
+
+**Tela Home com CRUD**
+Tela solicitada pelo orientador da etapa. (Foi feita em em outra Branch para não interferir a tela Home pincipal do projeto. A mesma não será utilizada no projeto por não ter compatibilidade com arquitetura do projeto estabelecido)
+
+![Gif Tela Home CRUD](img/Compraí-Home-CRUD.gif)
