@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity} from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
 import CustomButton from "../components/CustomButton";
 import jsonData from "../DB/listas.json";
 
@@ -12,26 +12,28 @@ export default function MyLists({ navigation }) {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>Minhas Listas</Text>
-        <FlatList
-          data={myList}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate("List", {
-                  nome: item.nome,
-                  listaInicial: item.lista,
-                })
-              }
-            >
-              <View style={styles.itemContainer}>
-                <Text style={styles.itemText}>{item.nome}</Text>
-                <TouchableOpacity >
-                  <Ionicons name={'ellipsis-vertical-outline'} size={24} color={'#FFF'} />
-                </TouchableOpacity>
-              </View>
-            </TouchableOpacity>
-          )}
-        />
+        <View style={styles.flatList}>
+          <FlatList
+            data={myList}
+            renderItem={({ item }) => (
+              <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate("List", {
+                    nome: item.nome,
+                    listaInicial: item.lista,
+                  })
+                }
+              >
+                <View style={styles.itemContainer}>
+                  <Text style={styles.itemText}>{item.nome}</Text>
+                  <TouchableOpacity >
+                    <Ionicons name={'ellipsis-vertical-outline'} size={24} color={'#FFF'} />
+                  </TouchableOpacity>
+                </View>
+              </TouchableOpacity>
+            )}
+          />
+        </View>
         <View style={styles.positionButton}>
           <CustomButton
             title={"Nova Lista"}
@@ -64,7 +66,6 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
     width: '90%'
   },
   title: {
@@ -98,4 +99,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#FFFFFF",
   },
+  flatList:{
+    height: '70%'
+  }
 });
