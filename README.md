@@ -4,7 +4,7 @@
 
 `Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio - Time 4`
 
-`2º SEMESTRE`
+`3º SEMESTRE`
 
 O projeto Compraí consiste em uma ferramenta facilitadora organizacional para auxiliar de maneira simplificada em suas compras de mercado, 
 organizando de maneira intuitiva sua lista de compras e gerando o valor de suas despesas ao final.
@@ -15,7 +15,6 @@ organizando de maneira intuitiva sua lista de compras e gerando o valor de suas 
 * Mahavishnu Jneesh Afonso
 * Allan Cesar Amaral Gomes
 * João Gabriel Pereira da Silva
-* Rafael Santana de Oliveira 
 * Pedro Henrique Filgueiras Couto
 * Ercules Mauricio de Siqueira Filho
 
