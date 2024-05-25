@@ -13,22 +13,17 @@ const Main = () => {
         }}>
             <Stack.Screen
                 name="Onboarding"
-                component={Onboarding}
-                options={{
-                    header: () => null,
-                }} />
+                component={Onboarding} options={{ headerShown: false }} />
             <Stack.Screen
                 name="Login"
-                component={Login}
-                options={{
-                    header: () => null,
+                component={Login} options={{
+                    headerBackTitleVisible: false, headerTitle: '', headerShadowVisible: false, headerTintColor: '#000'
                 }}
             />
             <Stack.Screen
                 name="CreateAccount"
-                component={CreateAccount}
-                options={{
-                    header: () => null,
+                component={CreateAccount} options={{
+                    headerBackTitleVisible: false, headerTitle: '', headerShadowVisible: false, headerTintColor: '#000'
                 }}
             />
         </Stack.Navigator>
