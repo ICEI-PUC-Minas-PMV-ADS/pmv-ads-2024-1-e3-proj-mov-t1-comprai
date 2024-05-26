@@ -75,7 +75,7 @@ Foram atualizados os botões e os visuais da tela.
 
 <br>
 
-<img src="./img/My-Lists.jpg">
+<img src="./img/My_Lists_eixo4.jfif">
 
 # Tela de Perfil do Usuario
 
