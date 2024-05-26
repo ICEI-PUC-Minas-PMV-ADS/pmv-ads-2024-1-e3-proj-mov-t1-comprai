@@ -22,7 +22,7 @@ ambiente expo, conforme o primeiro modulo do Microfundamento de Desenvolvimento 
 Todo:
 
 [x] Adicionar rota no botão fazendo levar pra tela home
-[ ] Adicionar banco e autenticação do usuario
+[X] Adicionar banco e autenticação do usuario
 
 <img src="../docs/img/teste.gif">
 
@@ -33,6 +33,14 @@ Implementei uma tela de login com estilos os estilos do Figma, além de uma solu
 <br>
 
 <img src="../docs/img/loginFuncionalidade.gif">
+
+<br>
+
+implementei nesta etapa ao sistema de login e registro de usuario de nossa aplicação a parte de salvar os dados na API por meio de operações de Create e Read junto a parte logica para mandar estes dados para a Fake API. Utilizei dos recursos da azure disponibilizados e hospedei a nossa Fake API de forma a se ter um melhor acesso e gerenciamento do desenvolvimento. Realizei em conjunto a construção de parte do context salvando parte dos dados do ususario localmente para se usar posteriormente em conjunto a refinamentos e componentização de partes da tela. Mais informações conforme video/gif a seguir.
+
+<img src="../docs/img/loginEtapa3.gif">
+
+<br>
 
 # Tela de Lista de compra
 
@@ -65,12 +73,7 @@ Sendo desenvolvido por João Gabriel.
 Tela de perfil do usuário. Foram desenvolvido as partes de inserir nome, o e-mail e a senha.
 Não consegui criar uma funcionalidade de mostrar a senha, o botão ''salvar'' não está funcional.
 
-
 ![tela usuario](./img/tela_perfil.jpeg)
-
-
-
-
 
 # Tela de Cadastro de Usuario
 
@@ -93,13 +96,12 @@ OBS: Recebeu atualizações em interface com inserção de estilos para a etapa 
 <img src="../docs/img/Tela-Home(Etapa-3).png">
 <img src="../docs/img/Tela Home (Etapa 3).jpeg">
 
-* Atualizações Etapa 4
+- Atualizações Etapa 4
 
-**Tela Home** 
+**Tela Home**
 Tela desenvolvida para o projeto principal do eixo.
 
 ![Gif Tela Home Principal](img/Tela-Home-Principal.gif)
-
 
 **Tela Home com CRUD**
 Tela solicitada pelo orientador da etapa. (Foi feita em em outra Branch para não interferir a tela Home pincipal do projeto. A mesma não será utilizada no projeto por não ter compatibilidade com arquitetura do projeto estabelecido)
