@@ -121,4 +121,6 @@ Passos:
 4) 4. Avaliar a consistência do design e o uso de elementos visuais.
 *Critério de Êxito: O design da interface deve ser consistente em todas as telas e utilizar elementos visuais de forma eficaz para facilitar a compreensão e a usabilidade.*
 
-**Etapa 1-** Conferir os itens de acessibilidade e interação intuitiva (Conferir o quanto o aplicativo se comporta em relação a erros encontrados por parte de usuário)
+**Resultado**
+
+![Gif projeto Compraí](../docs/img/Compraí-Projeto.gif)
