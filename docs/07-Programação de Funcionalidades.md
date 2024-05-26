@@ -60,15 +60,18 @@ Sendo desenvolvida por Ercules Mauricio de Siqueira Filho.
 - Evolução na estilização da tela.
   ![Print Tela Lista de compra parte 2](img/07-tela-list-2.jpg)
 
+- Evolução nas funcionalidades da tela: lista apresentada dinamicamente, adição e persistência de novos itens, soma do valor dos itens e opção de marcar ou desmarcar itens escolhidos.
+  ![Gif demonstrando funcionalidades da Tela Lista de compra parte 3](img/07-tela-list-3.gif)
+
 # Tela de Listas Criadas
 
 Sendo desenvolvida por Pedro Henrique Filgueiras Couto.
-Atualização etapa 3 programação de uma funcionalidade de leitura de arquivo json e apresentação em tela do Nome das listas.
-Ao clicar em cada lista o botão derruba o sistema pois a lógica de abertura de listas ainda não foi implementada.
-
+Atualização Etapa 4
+Foram atualizados os botões e os visuais da tela.
 ### Todo:
 
-[ ] Fazer com que a lista seja demonstrada ao clicar no registro selecionado.
+[ ] Implementar a regra de visualização do json passada pelo time utilizando get.
+[ ] Enviar informações do botão da lista selecionada para a tela Lists.
 
 <br>
 
