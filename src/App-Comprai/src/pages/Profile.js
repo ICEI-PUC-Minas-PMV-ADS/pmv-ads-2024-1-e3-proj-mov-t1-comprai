@@ -29,7 +29,7 @@ const MeuPerfil = () => {
             onChangeText={setName}
             autoCapitalize="none"
           />
-          <Label label="Email" iconName="mail-outline" iconSize={15} />
+          <Label label="E-mail" iconName="mail-outline" iconSize={15} />
           <Input
             placeholder="Digite seu E-mail"
             value={email}
@@ -38,7 +38,7 @@ const MeuPerfil = () => {
             autoCapitalize="none"
           />
 
-          <Label label="Password" iconName="lock-closed-outline" iconSize={15} />
+          <Label label="Senha" iconName="lock-closed-outline" iconSize={15} />
           <View style={styles.inputPassword}>
             <Input
               placeholder="Digite sua senha"

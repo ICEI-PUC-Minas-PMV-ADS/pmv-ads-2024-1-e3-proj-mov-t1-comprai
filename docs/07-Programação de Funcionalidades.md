@@ -83,6 +83,10 @@ Não consegui criar uma funcionalidade de mostrar a senha, o botão ''salvar'' n
 
 ![tela usuario](./img/tela_perfil.jpeg)
 
+Estilização atualizada de acordo com o padrão do Figma. Falta deixar a tela responsiva.
+
+![tela usuario](./img/tela_perfil2.jpeg)
+
 # Tela de Cadastro de Usuario
 
 Sendo desenvolvida por Rafael Santana de Oliveira
