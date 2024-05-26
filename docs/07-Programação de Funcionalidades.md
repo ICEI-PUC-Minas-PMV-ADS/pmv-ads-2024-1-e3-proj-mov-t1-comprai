@@ -60,6 +60,9 @@ Sendo desenvolvida por Ercules Mauricio de Siqueira Filho.
 - Evolução na estilização da tela.
   ![Print Tela Lista de compra parte 2](img/07-tela-list-2.jpg)
 
+- Evolução nas funcionalidades da tela: lista apresentada dinamicamente, adição e persistência de novos itens, soma do valor dos itens e opção de marcar ou desmarcar itens escolhidos.
+  ![Gif demonstrando funcionalidades da Tela Lista de compra parte 3](img/07-tela-list-3.gif)
+
 # Tela de Listas Criadas
 
 Sendo desenvolvida por Pedro Henrique Filgueiras Couto.
