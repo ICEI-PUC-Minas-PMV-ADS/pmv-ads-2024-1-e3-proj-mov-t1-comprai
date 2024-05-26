@@ -14,7 +14,11 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/
 
 Para a conclusão da etapa 4, realizei a implementação completa da navegação do aplicativo, incluindo a navegação por pilha (stack navigation) e a navegação por abas (tab navigation) entre as diversas telas. Além disso, efetuei a estilização de várias telas para que correspondessem ao layout originalmente projetado. As telas que receberam essa estilização incluem ‘Profile’, ‘MyLists’, ‘Lists’, além de uma correção (FIX) implementada no botão de retorno das telas ‘Login’ e ‘CreateAccount’. No que diz respeito às dificuldades encontradas, enfrentei alguns desafios ao trabalhar com o json-server e json-server-auth. Isso ocorreu principalmente porque as aulas ministradas pelo professor estavam desatualizadas.
 
-<video src="../docs/img/video-etapa-4.mp4"></>
+
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/assets/97925429/c12584e8-a656-4b61-a122-e3c7584ae156
+
+
 
 # Tela de Login
 
