@@ -8,18 +8,17 @@ Os testes de usabilidade são importantes em nosso software para garantir que os
 - Objetivo: Avaliar a facilidade de inserção de informações no aplicativo de lista de compras. 
 - Tarefa: Solicitar aos usuários para criar uma nova lista de compras e adicionar itens à mesma. 
 
- Critérios de sucesso: 
+Critérios de sucesso: 
  - Os usuários conseguem adicionar itens à lista de compras de maneira rápida e sem erros. 
  - O sistema oferece orientações claras sobre como adicionar itens à lista.
  - Os usuários podem editar ou remover itens da lista facilmente.
 
 
- ### Plano de Teste 2:  Comparação de Preços 
+ ### Plano de Teste 2: Acessibilidade e intuitividade 
 
-- Objetivo: Avaliar a facilidade e eficácia da funcionalidade de comparação de preços do aplicativo.
-- Tarefa: Solicitar aos usuários para selecionar um item na lista de compras e comparar os preços entre diferentes estabelecimentos. 
+- Objetivo: Avaliar a facilidade e eficácia da navegação de usuário pelo aplicativo.
+- Tarefa: Solicitar aos usuário que explorem por completo todas funcionalidades do aplicativo.
 
 Critérios de sucesso: 
- - Os usuários conseguem acessar facilmente a funcionalidade de comparação de preços.
- - O sistema apresenta os preços dos itens de forma clara e organizada para cada estabelecimento.
- - Os usuários conseguem realizar a comparação de preços de maneira intuitiva e sem dificuldades.
+ - Os usuários conseguem acessar facilmente todas as funcionalidades da aplicação.
+ - Os usuários sentirem facilidade e fluidez durante a experência com a plataforma.
