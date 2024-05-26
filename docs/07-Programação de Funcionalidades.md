@@ -66,12 +66,12 @@ Sendo desenvolvida por Ercules Mauricio de Siqueira Filho.
 # Tela de Listas Criadas
 
 Sendo desenvolvida por Pedro Henrique Filgueiras Couto.
-Atualização etapa 3 programação de uma funcionalidade de leitura de arquivo json e apresentação em tela do Nome das listas.
-Ao clicar em cada lista o botão derruba o sistema pois a lógica de abertura de listas ainda não foi implementada.
-
+Atualização Etapa 4
+Foram atualizados os botões e os visuais da tela.
 ### Todo:
 
-[ ] Fazer com que a lista seja demonstrada ao clicar no registro selecionado.
+[ ] Implementar a regra de visualização do json passada pelo time utilizando get.
+[ ] Enviar informações do botão da lista selecionada para a tela Lists.
 
 <br>
 
