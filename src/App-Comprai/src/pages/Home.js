@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
   },
   positionButton: {
     paddingTop: 45,
-    paddingBottom: 27,
+    paddingBottom: 37,
   }
 });
