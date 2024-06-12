@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import { useUser, } from "../contexts/UseContexts";
 import CustomButton from "../components/CustomButton";
 
-export default function Home() {
+export default function Home({ navigation }) {
   const { name } = useUser()
   return (
     <SafeAreaView style={styles.container}>
@@ -11,12 +11,17 @@ export default function Home() {
         <Text style={styles.mainP}> Bora começar a organizar suas compras de supermercados? </Text>
         <Image style={styles.mainLogo} source={require('../../assets/eco-market--leisure-food-eco-market.png')} />
         <Text style={styles.seccH1}>Vamos criar sua lista de compras!</Text>
-        <Text style={styles.seccP}>Clique no botão "+" para criar sua lista</Text>     
+        <Text style={styles.seccP}>Clique no botão "+" para criar sua lista</Text>
         <View style={styles.positionButton}>
-        <CustomButton
-            title={"Nova Lista"}
-            icon={"add"}>
-            </CustomButton>
+          <View style={styles.positionButton}>
+            <CustomButton
+              title={"Nova Lista"}
+              icon={"add"}
+              onPress={() => {
+                navigation.navigate("List", {});
+              }}
+            />
+          </View>
         </View>
       </View>
     </SafeAreaView >
