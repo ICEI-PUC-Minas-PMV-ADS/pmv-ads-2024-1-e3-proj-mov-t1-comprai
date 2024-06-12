@@ -18,10 +18,10 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Login({ navigation }) {
   const [hidePassword, setHidePassword] = useState(true);
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('joaoteste@gmail.com');
+  const [password, setPassword] = useState('teste');
   const { setSigned, setName } = useUser();
-
+  const { id, setId } = useUser();
 
   const handleLogin = () => {
     console.log('chamou')
@@ -33,6 +33,7 @@ export default function Login({ navigation }) {
 
       if (res && res.user) {
         setName(res.user.name)
+        setID(res.user.id)
         AsyncStorage.setItem('@TOKEN', res.accessToken).then()
         setSigned(true)
       } else {
