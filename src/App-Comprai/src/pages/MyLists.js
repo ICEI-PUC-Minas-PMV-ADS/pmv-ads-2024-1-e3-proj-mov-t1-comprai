@@ -1,12 +1,24 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
+import React, { useState, useEffect } from "react";
+import { StyleSheet, Text, View, ActivityIndicator, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
 import CustomButton from "../components/CustomButton";
-import jsonData from "../DB/listas.json";
+import { getlistas } from '../services/Lists.services'
 
 import { Ionicons } from "@expo/vector-icons"
 
 export default function MyLists({ navigation }) {
-  const [myList, setMyList] = useState(jsonData);
+  const [listas, setListas] = useState([]);
+
+  useEffect(() => {
+    const fetchListas = async () => {
+      try {
+        const data = await getlistas();
+        setListas(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchListas();
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -14,7 +26,7 @@ export default function MyLists({ navigation }) {
         <Text style={styles.title}>Minhas Listas</Text>
         <View style={styles.flatList}>
           <FlatList
-            data={myList}
+            data={listas}
             renderItem={({ item }) => (
               <TouchableOpacity
                 onPress={() =>
@@ -39,18 +51,7 @@ export default function MyLists({ navigation }) {
             title={"Nova Lista"}
             icon={"add"}
             onPress={() => {
-              let id = myList.length
-              jsonData.push({
-                id: id + 1,
-                nome: `Teste ${id + 1}`,
-                lista: [],
-              });
-              setMyList(jsonData);
-
-              navigation.navigate("List", {
-                nome: myList[id].nome,
-                listaInicial: myList[id].lista,
-              });
+              navigation.navigate("List", {});
             }}
           />
         </View>
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#FFFFFF",
   },
-  flatList:{
+  flatList: {
     height: '70%'
   }
 });

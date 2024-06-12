@@ -10,14 +10,22 @@ const f = new Intl.NumberFormat("pt-BR", {
 });
 
 export default function List({ navigation, route }) {
-  const { nome } = route.params;
+  const [nomeLista, setNomeLista] = useState('Aleatorio1');
   const { listaInicial } = route.params;
   const [lista, setLista] = useState(listaInicial);
-
+  let calculeTotalPrice = (item) => {
+    let totalPrice = 0;
+    if (item !== undefined) {
+      item.forEach((element) => {
+        totalPrice += element.itemQuantidade * element.itemPreco;
+      });
+    }
+    return totalPrice;
+  }
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>{nome}</Text>
+        <Text style={styles.title}>{nomeLista}</Text>
         <View style={styles.flatList}>
           <FlatList
             data={lista}
@@ -67,16 +75,6 @@ export default function List({ navigation, route }) {
     </SafeAreaView>
   );
 }
-
-let calculeTotalPrice = (item) => {
-  let totalPrice = 0;
-  if (item !== undefined) {
-    item.forEach((element) => {
-      totalPrice += element.itemQuantidade * element.itemPreco;
-    });
-  }
-  return totalPrice;
-};
 
 const styles = StyleSheet.create({
   container: {
