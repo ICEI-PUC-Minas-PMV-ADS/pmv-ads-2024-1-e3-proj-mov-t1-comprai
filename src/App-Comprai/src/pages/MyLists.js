@@ -1,24 +1,57 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, ActivityIndicator, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, ActivityIndicator, SafeAreaView, FlatList, Alert, TouchableOpacity } from "react-native";
 import CustomButton from "../components/CustomButton";
-import { getlistas } from '../services/Lists.services'
-
+import { getlistas, deleteLista } from '../services/Lists.services'
+import { useIsFocused } from '@react-navigation/native';
 import { Ionicons } from "@expo/vector-icons"
 
 export default function MyLists({ navigation }) {
   const [listas, setListas] = useState([]);
+  const isFocused = useIsFocused();
+
+  const fetchListas = async () => {
+    try {
+      const data = await getlistas();
+      setListas(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await deleteLista(id)
+      Alert.alert('Sucesso', 'Lista deletada com sucesso!');
+      fetchListas();
+    } catch {
+      Alert.alert('Erro', 'Não foi possível deletar a sua lista.');
+    }
+  }
 
   useEffect(() => {
-    const fetchListas = async () => {
-      try {
-        const data = await getlistas();
-        setListas(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchListas();
-  }, []);
+    if (isFocused) {
+      fetchListas();
+    }
+  }, [isFocused]);
+
+  const confirmDelete = (id) => {
+    Alert.alert(
+      "Confirmação",
+      "Você tem certeza que deseja deletar esta lista?",
+      [
+        {
+          text: "Cancelar",
+          style: "cancel"
+        },
+        {
+          text: "Deletar",
+          onPress: () => handleDelete(id)
+        }
+      ],
+      { cancelable: false }
+    );
+  };
+
 
   return (
     <SafeAreaView style={styles.container}>
@@ -38,8 +71,8 @@ export default function MyLists({ navigation }) {
               >
                 <View style={styles.itemContainer}>
                   <Text style={styles.itemText}>{item.nome}</Text>
-                  <TouchableOpacity >
-                    <Ionicons name={'ellipsis-vertical-outline'} size={24} color={'#FFF'} />
+                  <TouchableOpacity onPress={() => confirmDelete(item.id)}>
+                    <Ionicons name={'close-outline'} size={24} color={'#FFF'} />
                   </TouchableOpacity>
                 </View>
               </TouchableOpacity>
