@@ -2,7 +2,7 @@ import API from "./webapi.services"
 import { Base_URL } from "./urls"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// GET 
+// GET
 export const getlistas = async () => {
     const userId = await AsyncStorage.getItem('idUser');
     try {
@@ -25,11 +25,9 @@ export const getlistas = async () => {
 }
 
 // POST
-export const criarLista = async (nomeLista, lista, idUser) => {
+export const criarLista = async (nomeLista, idUser, lista) => {
     try {
-        console.log('here')
-        console.log(lista, idUser, nomeLista)
-        const response = await API.post(`${Base_URL}/listas`, {
+        const response = await API.post(`${Base_URL}/660/listas`, {
             nome: nomeLista,
             idUser: idUser,
             lista: lista,
@@ -40,3 +38,14 @@ export const criarLista = async (nomeLista, lista, idUser) => {
         throw error;
     }
 };
+
+// Delete 
+export const deleteLista = async (id) => {
+    try {
+        const response = await API.delete(`${Base_URL}/listas/${id}`);
+        return response.data;
+    } catch (error) {
+        console.log("Erro ao deletar a lista:", error);
+        throw error;
+    }
+}
