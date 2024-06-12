@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
 import CustomButton from "../components/CustomButton";
-import jsonData from "../DB/listas.json";
 
 import { Ionicons } from "@expo/vector-icons"
+import { getList } from "../services/listpull.services";
 
 export default function MyLists({ navigation }) {
   const [myList, setMyList] = useState(jsonData);
+  const jsonData = getList();
 
   return (
     <SafeAreaView style={styles.container}>
