@@ -1,18 +1,16 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
+import React, { useState, useEffect } from "react";
+import { Alert, StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import CustomButton from "../components/CustomButton";
 import CardItem from "../components/list/CardItem";
-
-const f = new Intl.NumberFormat("pt-BR", {
-  style: "currency",
-  currency: "BRL",
-  maximumFractionDigits: 2,
-});
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { criarLista } from "../services/Lists.services";
 
 export default function List({ navigation, route }) {
   const [nomeLista, setNomeLista] = useState('Aleatorio1');
   const { listaInicial } = route.params;
-  const [lista, setLista] = useState(listaInicial);
+  const [lista, setLista] = useState(listaInicial || []);
+  const [idUser, setIdUser] = useState(null);
+
   let calculeTotalPrice = (item) => {
     let totalPrice = 0;
     if (item !== undefined) {
@@ -22,10 +20,66 @@ export default function List({ navigation, route }) {
     }
     return totalPrice;
   }
+
+
+  const f = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    maximumFractionDigits: 2,
+  });
+
+  useEffect(() => {
+    const fetchUserId = async () => {
+      try {
+        const userId = await AsyncStorage.getItem('idUser');
+        if (userId) {
+          setIdUser(userId);
+        } else {
+          Alert.alert('Erro', 'Usuário não autenticado.');
+        }
+      } catch (error) {
+        console.error('Erro ao obter idUser:', error);
+        Alert.alert('Erro', 'Não foi possível obter o id do usuário.');
+      }
+    };
+    fetchUserId();
+  }, []);
+
+  const handleAddItem = () => {
+    if (idUser) {
+      const newItem = {
+        itemChecado: false,
+        itemNome: "Novo Item",
+        itemPreco: 0,
+        itemQuantidade: 1,
+      };
+      setLista([...lista, newItem]);
+      console.log(lista)
+    } else {
+      Alert.alert('Erro', 'Usuário não autenticado.');
+    }
+  };
+
+  const handleSubmitLista = async () => {
+    try {
+      await criarLista(lista, nomeLista, idUser);
+      Alert.alert('Sucesso', 'Lista salva com sucesso!');
+    } catch {
+      Alert.alert('Erro', 'Não foi possível salvar a lista.');
+    }
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.title}>{nomeLista}</Text>
+        <View >
+          <CustomButton
+            title={"Salvar Lista"}
+            icon={"save"}
+            onPress={handleSubmitLista}
+          />
+        </View>
         <View style={styles.flatList}>
           <FlatList
             data={lista}
@@ -56,19 +110,7 @@ export default function List({ navigation, route }) {
           <CustomButton
             title={"Adicionar Item"}
             icon={"add"}
-            onPress={() => {
-              lista.push({
-                itemChecado: false,
-                itemNome: "Item teste",
-                itemPreco: 2.5,
-                itemQuantidade: 1,
-              });
-              setLista(lista);
-              navigation.navigate("List", {
-                nome: nome,
-                listaInicial: lista,
-              })
-            }}
+            onPress={handleAddItem}
           />
         </View>
       </View>

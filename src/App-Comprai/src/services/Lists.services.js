@@ -1,10 +1,16 @@
 import API from "./webapi.services"
 import { Base_URL } from "./urls"
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // GET 
 export const getlistas = async () => {
+    const userId = await AsyncStorage.getItem('idUser');
     try {
-        return await API.get(`${Base_URL}/listas`).then(
+        return await API.get(`${Base_URL}/listas`, {
+            params: {
+                idUser: userId,
+            }
+        }).then(
             Response => {
                 return Response.data;
             }, error => {
@@ -19,13 +25,18 @@ export const getlistas = async () => {
 }
 
 // POST
-export const criarLista = async (nomeLista) => {
+export const criarLista = async (nomeLista, lista, idUser) => {
     try {
-        const idUser = await AsyncStorage.getItem('idUser');
-        const response = await api.post('/listas', { name: nomeLista, idUser });
+        console.log('here')
+        console.log(lista, idUser, nomeLista)
+        const response = await API.post(`${Base_URL}/listas`, {
+            nome: nomeLista,
+            idUser: idUser,
+            lista: lista,
+        });
         return response.data;
     } catch (error) {
-        console.error("Erro ao criar lista: ", error);
+        console.error('Erro ao submeter a lista:', error);
         throw error;
     }
 };

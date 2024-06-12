@@ -18,10 +18,9 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Login({ navigation }) {
   const [hidePassword, setHidePassword] = useState(true);
-  const [email, setEmail] = useState('joaoteste@gmail.com');
-  const [password, setPassword] = useState('teste');
+  const [email, setEmail] = useState('cubo@gmail.com');
+  const [password, setPassword] = useState('cubo');
   const { setSigned, setName } = useUser();
-  const { id, setId } = useUser();
 
   const handleLogin = () => {
     console.log('chamou')
@@ -33,8 +32,9 @@ export default function Login({ navigation }) {
 
       if (res && res.user) {
         setName(res.user.name)
-        setID(res.user.id)
         AsyncStorage.setItem('@TOKEN', res.accessToken).then()
+        AsyncStorage.setItem('idUser', res.user.id.toString()).then()
+        console.log(res.user.id)
         setSigned(true)
       } else {
         Alert.alert("Atenção", 'Usuario ou senha invalidos!')
