@@ -34,6 +34,7 @@ export default function Login({ navigation }) {
       if (res && res.user) {
         setName(res.user.name)
         AsyncStorage.setItem('@TOKEN', res.accessToken).then()
+        AsyncStorage.setItem('idUser', res.user.id.toString()).then()
         setSigned(true)
       } else {
         Alert.alert("Atenção", 'Usuario ou senha invalidos!')
