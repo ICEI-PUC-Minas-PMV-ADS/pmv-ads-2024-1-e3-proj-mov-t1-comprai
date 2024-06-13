@@ -1,18 +1,19 @@
-import API from "./webapi.services"
-import { Base_URL } from "./urls"
+import API from "./webapi.services";
+import { Base_URL } from "./urls";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export const getList = async () => {
-    try {
-        return await API.get(`${Base_URL}/644/listas`).then(
-            Response => {
-                return Response.data;
-            }, error => {
-                console.log(error)
-                return null
-            }
-        )
-    } catch (error) {
-        console.log(error)
-        return null;
-    }
-}
+export const getList = async (idUser) => {
+  const userId = await AsyncStorage.getItem('idUser') 
+  try {
+    const response = await API.get(`${Base_URL}/listas`,{
+        params:{
+            idUser: userId,
+        }
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};

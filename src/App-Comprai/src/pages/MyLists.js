@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
 import CustomButton from "../components/CustomButton";
-
-import { Ionicons } from "@expo/vector-icons"
+import { Ionicons } from "@expo/vector-icons";
 import { getList } from "../services/listpull.services";
 
 export default function MyLists({ navigation }) {
-  const [myList, setMyList] = useState(jsonData);
-  const jsonData = getList();
+  const [myList, setMyList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getList();
+      if (data) { 
+        setMyList(data);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -16,6 +25,7 @@ export default function MyLists({ navigation }) {
         <View style={styles.flatList}>
           <FlatList
             data={myList}
+            keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
               <TouchableOpacity
                 onPress={() =>
@@ -27,7 +37,7 @@ export default function MyLists({ navigation }) {
               >
                 <View style={styles.itemContainer}>
                   <Text style={styles.itemText}>{item.nome}</Text>
-                  <TouchableOpacity >
+                  <TouchableOpacity>
                     <Ionicons name={'ellipsis-vertical-outline'} size={24} color={'#FFF'} />
                   </TouchableOpacity>
                 </View>
@@ -40,17 +50,21 @@ export default function MyLists({ navigation }) {
             title={"Nova Lista"}
             icon={"add"}
             onPress={() => {
-              let id = myList.length
-              jsonData.push({
-                id: id + 1,
-                nome: `Teste ${id + 1}`,
-                lista: [],
-              });
-              setMyList(jsonData);
+              let id = myList.length + 1;
+              const newList = [
+                ...myList,
+                {
+                  id: id,
+                  nome: `Teste ${id}`,
+                  lista: [],
+                  idUser: userId
+                }
+              ];
+              setMyList(newList);
 
               navigation.navigate("List", {
-                nome: myList[id].nome,
-                listaInicial: myList[id].lista,
+                nome: `Teste ${id}`,
+                listaInicial: [],
               });
             }}
           />
