@@ -13,15 +13,13 @@ export default function Home({ navigation }) {
         <Text style={styles.seccH1}>Vamos criar sua lista de compras!</Text>
         <Text style={styles.seccP}>Clique no botão "+" para criar sua lista</Text>
         <View style={styles.positionButton}>
-          <View style={styles.positionButton}>
-            <CustomButton
-              title={"Nova Lista"}
-              icon={"add"}
-              onPress={() => {
-                navigation.navigate("List", {});
-              }}
-            />
-          </View>
+          <CustomButton
+            title={"Nova Lista"}
+            icon={"add"}
+            onPress={() => {
+              navigation.navigate("List", {});
+            }}
+          />
         </View>
       </View>
     </SafeAreaView >
@@ -35,7 +33,8 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingBottom: '25%'
   },
   title: {
     fontSize: 24,
@@ -70,7 +69,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   positionButton: {
-    paddingTop: 45,
-    paddingBottom: 37,
+    position: 'absolute',
+    bottom: 100
   }
 });
