@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
 import CustomButton from "../components/CustomButton";
 import CardItem from "../components/list/CardItem";
+import ModalAddItem from "../components/list/ModalAddItem";
 
 const f = new Intl.NumberFormat("pt-BR", {
   style: "currency",
@@ -13,6 +14,7 @@ export default function List({ navigation, route }) {
   const { nome } = route.params;
   const { listaInicial } = route.params;
   const [lista, setLista] = useState(listaInicial);
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -28,11 +30,11 @@ export default function List({ navigation, route }) {
                 value={f.format(item.itemPreco)}
                 selected={item.itemChecado}
                 onPress={() => {
-                  item.itemChecado = !item.itemChecado
+                  item.itemChecado = !item.itemChecado;
                   navigation.navigate("List", {
                     nome: nome,
                     listaInicial: lista,
-                  })
+                  });
                 }}
               />
             )}
@@ -49,20 +51,16 @@ export default function List({ navigation, route }) {
             title={"Adicionar Item"}
             icon={"add"}
             onPress={() => {
-              lista.push({
-                itemChecado: false,
-                itemNome: "Item teste",
-                itemPreco: 2.5,
-                itemQuantidade: 1,
-              });
-              setLista(lista);
-              navigation.navigate("List", {
-                nome: nome,
-                listaInicial: lista,
-              })
+              setModalVisible(true);
             }}
           />
         </View>
+        <ModalAddItem
+          visible={modalVisible}
+          setVisible={setModalVisible}
+          lista={lista}
+          setLista={setLista}
+        />
       </View>
     </SafeAreaView>
   );
@@ -72,7 +70,9 @@ let calculeTotalPrice = (item) => {
   let totalPrice = 0;
   if (item !== undefined) {
     item.forEach((element) => {
-      totalPrice += element.itemQuantidade * element.itemPreco;
+      if (element.itemChecado === false) {
+        totalPrice += element.itemQuantidade * element.itemPreco;
+      }
     });
   }
   return totalPrice;
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   flatList: {
-    height: '70%',
-    width: "90%"
+    height: "70%",
+    width: "90%",
   },
   totalPriceContainer: {
     width: "90%",

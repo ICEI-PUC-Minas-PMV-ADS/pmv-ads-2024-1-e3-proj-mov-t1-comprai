@@ -2,12 +2,17 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 export default function CardItem({ name, qnt, value, selected, onPress }) {
   return (
-    <TouchableOpacity style={selected ? styles.containerChecked : styles.container} onPress={onPress}>
+    <TouchableOpacity
+      style={selected ? styles.containerChecked : styles.container}
+      onPress={onPress}
+    >
       <View style={styles.title}>
         <Text style={selected ? styles.textChecked : styles.text}>{name}</Text>
       </View>
       <View style={styles.body}>
-        <Text style={selected ? styles.textChecked : styles.text}>Qnt: {qnt}</Text>
+        <Text style={selected ? styles.textChecked : styles.text}>
+          Qnt: {qnt}
+        </Text>
         <Text style={selected ? styles.textChecked : styles.text}>{value}</Text>
       </View>
     </TouchableOpacity>
@@ -27,7 +32,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     marginVertical: 5,
     borderRadius: 10,
-    backgroundColor: "#26242490"
+    backgroundColor: "#26242490",
   },
   title: {
     alignItems: "center",
@@ -44,6 +49,6 @@ const styles = StyleSheet.create({
   textChecked: {
     fontSize: 20,
     color: "white",
-    textDecorationLine: 'line-through'
-  }
+    textDecorationLine: "line-through",
+  },
 });
