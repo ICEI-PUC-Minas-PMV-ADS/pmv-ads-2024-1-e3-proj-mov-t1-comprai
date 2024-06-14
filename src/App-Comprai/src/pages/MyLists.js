@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  FlatList,
-  TouchableOpacity,
-} from "react-native";
+import React, { useState, useEffect } from "react";
+import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
 import CustomButton from "../components/CustomButton";
-import ModalAddList from "../components/list/ModalAddList";
-import jsonData from "../DB/listas.json";
-
 import { Ionicons } from "@expo/vector-icons";
+import { getList } from "../services/listpull.services";
 
 export default function MyLists({ navigation }) {
-  const [myList, setMyList] = useState(jsonData);
-  const [modalVisible, setModalVisible] = useState(false);
+  const [myList, setMyList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getList();
+      if (data) { 
+        setMyList(data);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -24,6 +25,7 @@ export default function MyLists({ navigation }) {
         <View style={styles.flatList}>
           <FlatList
             data={myList}
+            keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
               <TouchableOpacity
                 onPress={() =>
@@ -36,11 +38,7 @@ export default function MyLists({ navigation }) {
                 <View style={styles.itemContainer}>
                   <Text style={styles.itemText}>{item.nome}</Text>
                   <TouchableOpacity>
-                    <Ionicons
-                      name={"ellipsis-vertical-outline"}
-                      size={24}
-                      color={"#FFF"}
-                    />
+                    <Ionicons name={'ellipsis-vertical-outline'} size={24} color={'#FFF'} />
                   </TouchableOpacity>
                 </View>
               </TouchableOpacity>
@@ -52,19 +50,26 @@ export default function MyLists({ navigation }) {
             title={"Nova Lista"}
             icon={"add"}
             onPress={() => {
-              setModalVisible(true);
+              let id = myList.length + 1;
+              const newList = [
+                ...myList,
+                {
+                  id: id,
+                  nome: `Teste ${id}`,
+                  lista: [],
+                  idUser: userId
+                }
+              ];
+              setMyList(newList);
+
+              navigation.navigate("List", {
+                nome: `Teste ${id}`,
+                listaInicial: [],
+              });
             }}
           />
         </View>
       </View>
-      <ModalAddList
-        visible={modalVisible}
-        setVisible={setModalVisible}
-        myList={myList}
-        setMyList={setMyList}
-        jsonData={jsonData}
-        navigation={navigation}
-      />
     </SafeAreaView>
   );
 }
@@ -76,13 +81,13 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     alignItems: "center",
-    width: "90%",
+    width: '90%'
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     color: "#2B7C7D",
-    paddingVertical: 20,
+    paddingVertical: 20
   },
   positionButton: {
     position: "absolute",
@@ -101,15 +106,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 8,
     marginBottom: 10,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: "100%",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%'
   },
   itemText: {
     fontSize: 18,
     color: "#FFFFFF",
   },
-  flatList: {
-    height: "70%",
-  },
+  flatList:{
+    height: '70%'
+  }
 });
