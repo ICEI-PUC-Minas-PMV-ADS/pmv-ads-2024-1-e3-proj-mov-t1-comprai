@@ -28,7 +28,7 @@ export default function CreateAccount({ navigation }) {
         ])
 
       } else {
-        Alert.alert('Atenção', 'usuario NÂO cadastrado')
+        Alert.alert('Atenção', 'usuario NÃO cadastrado')
       }
     });
   };
