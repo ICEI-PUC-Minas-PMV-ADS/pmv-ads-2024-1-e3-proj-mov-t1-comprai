@@ -5,43 +5,38 @@ import {
   View,
   SafeAreaView,
   TouchableOpacity,
+  Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Input from "../components/Input";
 
-import { login } from '../services/Auth.services'
+import { login } from "../services/Auth.services";
 import PrimaryButton from "../components/PrimaryButton";
 import Label from "../components/Label";
 import { useUser } from "../contexts/UseContexts";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-
 export default function Login({ navigation }) {
-  const [hidePassword, setHidePassword] = useState(true);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const { setSigned, setName } = useUser();
-
+  const [hidePassword, setHidePassword] = useState(true);
+  const { setSigned, setName, setID } = useUser();
 
   const handleLogin = () => {
-    console.log('chamou')
     login({
       email: email,
-      password: password
-    }).then(res => {
-      console.log(res);
-
+      password: password,
+    }).then((res) => {
       if (res && res.user) {
-        setName(res.user.name)
-        AsyncStorage.setItem('@TOKEN', res.accessToken).then()
-        AsyncStorage.setItem('idUser', res.user.id.toString()).then()
-        setSigned(true)
+        AsyncStorage.setItem("@TOKEN", res.accessToken).then();
+        setName(res.user.name);
+        setID(res.user.id);
+        setSigned(true);
       } else {
-        Alert.alert("Atenção", 'Usuario ou senha invalidos!')
+        Alert.alert("Atenção", "Usuario ou senha invalidos!");
       }
-    })
-  }
-
+    });
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -50,11 +45,21 @@ export default function Login({ navigation }) {
 
         <View style={styles.mainInput}>
           <Label label="Seu E-mail" iconName="mail-outline" iconSize={15} />
-          <Input label="Email" value={email} onChangeText={(text) => setEmail(text)} placeholder="Digite seu email" />
+          <Input
+            label="Email"
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+            placeholder="Digite seu email"
+          />
 
           <Label label="Senha" iconName="lock-closed-outline" iconSize={15} />
           <View style={styles.inputPassword}>
-            <Input placeholder="Digite a sua senha" onChangeText={(text) => setPassword(text)} value={password} secureTextEntry={hidePassword} />
+            <Input
+              placeholder="Digite a sua senha"
+              onChangeText={(text) => setPassword(text)}
+              value={password}
+              secureTextEntry={hidePassword}
+            />
 
             <TouchableOpacity
               onPress={() => setHidePassword(!hidePassword)}
@@ -69,10 +74,7 @@ export default function Login({ navigation }) {
           </View>
         </View>
 
-        <PrimaryButton
-          title={"Entrar"}
-          onPress={handleLogin}
-        />
+        <PrimaryButton title={"Entrar"} onPress={handleLogin} />
 
         <View style={styles.linkCreate}>
           <View>

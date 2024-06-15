@@ -1,25 +1,20 @@
-import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
-import { useUser, } from "../contexts/UseContexts";
-import CustomButton from "../components/CustomButton";
+import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
+import { useUser } from "../contexts/UseContexts";
 
 export default function Home() {
-  const { name } = useUser()
+  const { name } = useUser();
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.mainText}> Bem Vindo ao App Compraí, {name} </Text>
         <Text style={styles.mainP}> Bora começar a organizar suas compras de supermercados? </Text>
-        <Image style={styles.mainLogo} source={require('../../assets/eco-market--leisure-food-eco-market.png')} />
+        <Image
+          style={styles.mainLogo}
+          source={require("../../assets/eco-market--leisure-food-eco-market.png")}
+        />
         <Text style={styles.seccH1}>Vamos criar sua lista de compras!</Text>
-        <Text style={styles.seccP}>Clique no botão "+" para criar sua lista</Text>     
-        <View style={styles.positionButton}>
-        <CustomButton
-            title={"Nova Lista"}
-            icon={"add"}>
-            </CustomButton>
-        </View>
       </View>
-    </SafeAreaView >
+    </SafeAreaView>
   );
 }
 
@@ -29,26 +24,26 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#2B7C7D'
+    fontWeight: "bold",
+    color: "#2B7C7D",
   },
   mainText: {
     fontSize: 26,
-    textAlign: 'center',
-    color: '#2B7C7D',
-    fontWeight: 'bold'
+    textAlign: "center",
+    color: "#2B7C7D",
+    fontWeight: "bold",
   },
   mainP: {
     marginLeft: 15,
     marginRight: 15,
-    textAlign: 'center',
+    textAlign: "center",
     paddingTop: 11,
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
   mainLogo: {
     marginTop: 36,
@@ -56,16 +51,16 @@ const styles = StyleSheet.create({
   seccH1: {
     marginTop: 35,
     fontSize: 16,
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
   seccP: {
     marginTop: 7,
-    color: '#2B7C7D',
+    color: "#2B7C7D",
     fontSize: 12,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   positionButton: {
     paddingTop: 45,
     paddingBottom: 37,
-  }
+  },
 });

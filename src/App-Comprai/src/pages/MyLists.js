@@ -50,20 +50,20 @@ export default function MyLists({ navigation }) {
             title={"Nova Lista"}
             icon={"add"}
             onPress={() => {
-              let id = myList.length + 1;
+              let idList = myList.length + 1;
               const newList = [
                 ...myList,
                 {
-                  id: id,
-                  nome: `Teste ${id}`,
+                  id: idList,
+                  nome: `Teste ${idList}`,
                   lista: [],
-                  idUser: userId
+                  idUser: idList
                 }
               ];
               setMyList(newList);
 
               navigation.navigate("List", {
-                nome: `Teste ${id}`,
+                nome: `Teste ${idList}`,
                 listaInicial: [],
               });
             }}
