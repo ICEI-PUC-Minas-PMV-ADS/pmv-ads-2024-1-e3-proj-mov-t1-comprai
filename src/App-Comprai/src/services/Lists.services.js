@@ -27,7 +27,7 @@ export const getlistas = async () => {
 // POST
 export const criarLista = async (nomeLista, idUser, lista) => {
     try {
-        const response = await API.post(`${Base_URL}/660/listas`, {
+        const response = await API.post(`${Base_URL}/listas`, {
             nome: nomeLista,
             idUser: idUser,
             lista: lista,

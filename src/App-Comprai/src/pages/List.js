@@ -4,7 +4,7 @@ import CustomButton from "../components/CustomButton";
 import CardItem from "../components/list/CardItem";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { criarLista } from "../services/Lists.services";
-import Input from "../components/Input";
+
 
 export default function List({ navigation, route }) {
   const [nomeLista, setNomeLista] = useState('Titulo');
