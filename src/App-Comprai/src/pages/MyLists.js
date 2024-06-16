@@ -1,22 +1,68 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  FlatList,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
+import { useIsFocused } from "@react-navigation/native";
 import CustomButton from "../components/CustomButton";
+import ModalAddList from "../components/list/ModalAddList";
 import { Ionicons } from "@expo/vector-icons";
-import { getList } from "../services/listpull.services";
+import { getList, deleteList } from "../services/listpull.services";
+import { useUser } from "../contexts/UseContexts";
 
 export default function MyLists({ navigation }) {
+  const isFocused = useIsFocused();
   const [myList, setMyList] = useState([]);
+  const [modalVisible, setModalVisible] = useState(false);
+  const { id } = useUser();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await getList();
-      if (data) { 
-        setMyList(data);
-      }
-    };
+    if (isFocused) {
+      fetchData();
+    }
+  }, [isFocused]);
 
-    fetchData();
-  }, []);
+  const fetchData = async () => {
+    try {
+      const data = await getList(id);
+      setMyList(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDelete = async (listId) => {
+    try {
+      await deleteList(listId);
+      fetchData();
+      Alert.alert("Sucesso", "Lista deletada com sucesso!");
+    } catch {
+      Alert.alert("Erro", "Não foi possível deletar a sua lista.");
+    }
+  };
+
+  const confirmDelete = (listId) => {
+    Alert.alert(
+      "Confirmação",
+      "Você tem certeza que deseja deletar esta lista?",
+      [
+        {
+          text: "Cancelar",
+          style: "cancel",
+        },
+        {
+          text: "Deletar",
+          onPress: () => handleDelete(listId),
+        },
+      ],
+      { cancelable: false }
+    );
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -25,20 +71,25 @@ export default function MyLists({ navigation }) {
         <View style={styles.flatList}>
           <FlatList
             data={myList}
-            keyExtractor={(item) => item.id.toString()}
             renderItem={({ item }) => (
               <TouchableOpacity
                 onPress={() =>
                   navigation.navigate("List", {
+                    id: item.id,
                     nome: item.nome,
-                    listaInicial: item.lista,
+                    lista: item.lista
                   })
                 }
               >
                 <View style={styles.itemContainer}>
                   <Text style={styles.itemText}>{item.nome}</Text>
                   <TouchableOpacity>
-                    <Ionicons name={'ellipsis-vertical-outline'} size={24} color={'#FFF'} />
+                    <Ionicons
+                      name={"close-outline"}
+                      size={24}
+                      color={"#FFF"}
+                      onPress={() => confirmDelete(item.id)}
+                    />
                   </TouchableOpacity>
                 </View>
               </TouchableOpacity>
@@ -50,26 +101,16 @@ export default function MyLists({ navigation }) {
             title={"Nova Lista"}
             icon={"add"}
             onPress={() => {
-              let idList = myList.length + 1;
-              const newList = [
-                ...myList,
-                {
-                  id: idList,
-                  nome: `Teste ${idList}`,
-                  lista: [],
-                  idUser: idList
-                }
-              ];
-              setMyList(newList);
-
-              navigation.navigate("List", {
-                nome: `Teste ${idList}`,
-                listaInicial: [],
-              });
+              setModalVisible(true);
             }}
           />
         </View>
       </View>
+      <ModalAddList
+        visible={modalVisible}
+        setVisible={setModalVisible}
+        navigation={navigation}
+      />
     </SafeAreaView>
   );
 }
@@ -81,13 +122,13 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     alignItems: "center",
-    width: '90%'
+    width: "90%",
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     color: "#2B7C7D",
-    paddingVertical: 20
+    paddingVertical: 20,
   },
   positionButton: {
     position: "absolute",
@@ -106,15 +147,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 8,
     marginBottom: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%'
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
   },
   itemText: {
     fontSize: 18,
     color: "#FFFFFF",
   },
-  flatList:{
-    height: '70%'
-  }
+  flatList: {
+    height: "70%",
+  },
 });

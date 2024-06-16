@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, SafeAreaView, FlatList } from "react-native";
+import { useIsFocused } from "@react-navigation/native";
 import CustomButton from "../components/CustomButton";
 import CardItem from "../components/list/CardItem";
 import ModalAddItem from "../components/list/ModalAddItem";
+import { getListById, putList } from "../services/listpull.services";
 
 const f = new Intl.NumberFormat("pt-BR", {
   style: "currency",
@@ -11,10 +13,26 @@ const f = new Intl.NumberFormat("pt-BR", {
 });
 
 export default function List({ navigation, route }) {
-  const { nome } = route.params;
-  const { listaInicial } = route.params;
-  const [lista, setLista] = useState(listaInicial);
+  const isFocused = useIsFocused();
+  const { id, nome, lista } = route.params;
+  const [listItems, setListItems] = useState(lista);
   const [modalVisible, setModalVisible] = useState(false);
+
+  useEffect(() => {
+    console.log('chamou')
+    if (isFocused) {
+      fetchData();
+    }
+  }, [isFocused]);
+
+  const fetchData = async () => {
+    try {
+      const data = await getListById(id);
+      setListItems(data.lista);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -22,7 +40,7 @@ export default function List({ navigation, route }) {
         <Text style={styles.title}>{nome}</Text>
         <View style={styles.flatList}>
           <FlatList
-            data={lista}
+            data={listItems}
             renderItem={({ item }) => (
               <CardItem
                 name={item.itemNome}
@@ -32,8 +50,9 @@ export default function List({ navigation, route }) {
                 onPress={() => {
                   item.itemChecado = !item.itemChecado;
                   navigation.navigate("List", {
+                    id: id,
                     nome: nome,
-                    listaInicial: lista,
+                    lista: listItems
                   });
                 }}
               />
@@ -43,7 +62,7 @@ export default function List({ navigation, route }) {
         <View style={styles.totalPriceContainer}>
           <Text style={styles.totalPriceValue}>Valor total:</Text>
           <Text style={styles.totalPriceValue}>
-            {f.format(calculeTotalPrice(lista))}
+            {f.format(calculeTotalPrice(listItems))}
           </Text>
         </View>
         <View style={styles.positionButton}>
@@ -58,8 +77,8 @@ export default function List({ navigation, route }) {
         <ModalAddItem
           visible={modalVisible}
           setVisible={setModalVisible}
-          lista={lista}
-          setLista={setLista}
+          lista={listItems}
+          setLista={setListItems}
         />
       </View>
     </SafeAreaView>

@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, Modal, View, TextInput } from "react-native";
+import { StyleSheet, Text, Modal, View, TextInput, Alert } from "react-native";
+import { postList } from "../../services/listpull.services";
+import { useUser } from "../../contexts/UseContexts.js";
 
 import CustomButton from "../CustomButton";
 
 export default function ModalAddList({
   visible,
   setVisible,
-  myList,
-  setMyList,
-  jsonData,
   navigation,
 }) {
   const [nome, setNome] = useState();
+  const { id } = useUser();
 
   return (
     <Modal
@@ -19,7 +19,8 @@ export default function ModalAddList({
       transparent={true}
       visible={visible}
       onRequestClose={() => {
-        setVisible(!visible);
+        setVisible(false);
+        setNome();
       }}
     >
       <View style={styles.modal}>
@@ -40,18 +41,22 @@ export default function ModalAddList({
             title={"Salvar"}
             icon={"add"}
             onPress={() => {
-              let id = myList.length;
-              jsonData.push({
-                id: id + 1,
+              postList({
+                idUser: id,
                 nome: nome,
-                lista: [],
+                lista: []
+              }).then(res => {          
+                if (res) {
+                  navigation.navigate("List", {
+                    id: res.id,
+                    nome: nome,
+                    lista: [],
+                  });
+                } else {
+                  Alert.alert('Atenção', 'Não foi possível criar a nova lista')
+                }
               });
-              setMyList(jsonData);
-
-              navigation.navigate("List", {
-                nome: myList[id].nome,
-                listaInicial: myList[id].lista,
-              });
+              setNome();
               setVisible(!visible);
             }}
           />
