@@ -3,7 +3,7 @@ import { StyleSheet, Text, Modal, View, TextInput } from "react-native";
 
 import CustomButton from "../CustomButton";
 
-export default function ModalAddItem({ visible, setVisible, lista, setLista }) {
+export default function ModalAddItem({ visible, setVisible, lista, setLista, handlePut }) {
   const [nome, setNome] = useState();
   const [preco, setPreco] = useState();
   const [quantidade, setQuantidade] = useState();
@@ -14,7 +14,7 @@ export default function ModalAddItem({ visible, setVisible, lista, setLista }) {
       transparent={true}
       visible={visible}
       onRequestClose={() => {
-        setVisible(!visible);
+        setVisible(false);
       }}
     >
       <View style={styles.modal}>
@@ -56,6 +56,7 @@ export default function ModalAddItem({ visible, setVisible, lista, setLista }) {
                 itemQuantidade: quantidade,
               });
               setLista(lista);
+              handlePut();
               setNome();
               setQuantidade();
               setPreco();

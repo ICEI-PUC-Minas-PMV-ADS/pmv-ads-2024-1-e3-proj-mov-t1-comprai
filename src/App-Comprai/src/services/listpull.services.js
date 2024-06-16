@@ -56,7 +56,6 @@ export const putList = async (listId, param) => {
   try {
     return await API.put(`${Base_URL}/listas/${listId}`, param).then(
       (response) => {
-        console.log(response.data)
         return response.data;
       },
       (error) => {

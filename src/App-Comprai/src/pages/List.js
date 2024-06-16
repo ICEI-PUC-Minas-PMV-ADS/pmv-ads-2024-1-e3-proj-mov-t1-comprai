@@ -5,6 +5,7 @@ import CustomButton from "../components/CustomButton";
 import CardItem from "../components/list/CardItem";
 import ModalAddItem from "../components/list/ModalAddItem";
 import { getListById, putList } from "../services/listpull.services";
+import { useUser } from "../contexts/UseContexts";
 
 const f = new Intl.NumberFormat("pt-BR", {
   style: "currency",
@@ -12,14 +13,14 @@ const f = new Intl.NumberFormat("pt-BR", {
   maximumFractionDigits: 2,
 });
 
-export default function List({ navigation, route }) {
+export default function List({ route }) {
   const isFocused = useIsFocused();
-  const { id, nome, lista } = route.params;
+  const { listId, nome, lista } = route.params;
   const [listItems, setListItems] = useState(lista);
   const [modalVisible, setModalVisible] = useState(false);
+  const { id } = useUser();
 
   useEffect(() => {
-    console.log('chamou')
     if (isFocused) {
       fetchData();
     }
@@ -27,10 +28,23 @@ export default function List({ navigation, route }) {
 
   const fetchData = async () => {
     try {
-      const data = await getListById(id);
+      const data = await getListById(listId);
       setListItems(data.lista);
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  const handlePut = async () => {
+    try {
+      await putList(listId, {
+        nome: nome,
+        idUser: id,
+        lista: listItems
+      });
+      fetchData();
+    } catch {
+      Alert.alert("Erro", "Não foi possível atualizar a sua lista.");
     }
   };
 
@@ -49,11 +63,7 @@ export default function List({ navigation, route }) {
                 selected={item.itemChecado}
                 onPress={() => {
                   item.itemChecado = !item.itemChecado;
-                  navigation.navigate("List", {
-                    id: id,
-                    nome: nome,
-                    lista: listItems
-                  });
+                  handlePut();
                 }}
               />
             )}
@@ -79,6 +89,7 @@ export default function List({ navigation, route }) {
           setVisible={setModalVisible}
           lista={listItems}
           setLista={setListItems}
+          handlePut={handlePut}
         />
       </View>
     </SafeAreaView>

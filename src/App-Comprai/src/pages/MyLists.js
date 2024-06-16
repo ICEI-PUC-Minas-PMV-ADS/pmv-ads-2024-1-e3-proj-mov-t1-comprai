@@ -75,7 +75,7 @@ export default function MyLists({ navigation }) {
               <TouchableOpacity
                 onPress={() =>
                   navigation.navigate("List", {
-                    id: item.id,
+                    listId: item.id,
                     nome: item.nome,
                     lista: item.lista
                   })

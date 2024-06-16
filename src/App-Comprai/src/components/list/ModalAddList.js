@@ -48,9 +48,9 @@ export default function ModalAddList({
               }).then(res => {          
                 if (res) {
                   navigation.navigate("List", {
-                    id: res.id,
-                    nome: nome,
-                    lista: [],
+                    listId: res.id,
+                    nome: res.nome,
+                    lista: res.lista,
                   });
                 } else {
                   Alert.alert('Atenção', 'Não foi possível criar a nova lista')
