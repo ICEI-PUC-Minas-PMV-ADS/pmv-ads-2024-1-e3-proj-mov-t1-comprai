@@ -5,6 +5,7 @@ import Input from '../components/Input';
 import Label from '../components/Label';
 
 import { Ionicons } from "@expo/vector-icons";
+import { useUser } from "../contexts/UseContexts";
 
 import CustomButton from '../components/CustomButton';
 
@@ -15,6 +16,24 @@ const MeuPerfil = () => {
   const [password, setPassword] = useState('');
 
   const [hidePassword, setHidePassword] = useState(true);
+  const { id } = useUser();
+
+  const handleSubmit = () => {
+    update(id, {
+      name: name,
+      email: email,
+      password: password
+    }).then(res => {
+      if (res) {
+        Alert.alert('Atenção', 'usuario atualizado com sucesso', [
+          { text: "OK" }
+        ])
+
+      } else {
+        Alert.alert('Atenção', 'usuario NÃO atualizado')
+      }
+    });
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -60,7 +79,7 @@ const MeuPerfil = () => {
           </View>
         </View>
 
-        <CustomButton title="Salvar" icon={'save'} onPress={() => {}}/>
+        <CustomButton title="Salvar" icon={'save'} onPress={() => {handleSubmit()}}/>
 
       </View>
     </SafeAreaView >
