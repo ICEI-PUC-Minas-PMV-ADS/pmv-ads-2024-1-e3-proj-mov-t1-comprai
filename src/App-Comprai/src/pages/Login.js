@@ -17,8 +17,8 @@ import { useUser } from "../contexts/UseContexts";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Login({ navigation }) {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('celio@gmail.com');
+  const [password, setPassword] = useState('cubo');
   const [hidePassword, setHidePassword] = useState(true);
   const { setSigned, setName, setID } = useUser();
 

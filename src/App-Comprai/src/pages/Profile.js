@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
-
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, SafeAreaView, View, Alert, Text, TouchableOpacity } from 'react-native';
 import Input from '../components/Input';
 import Label from '../components/Label';
-
 import { Ionicons } from "@expo/vector-icons";
 import { useUser } from "../contexts/UseContexts";
-
 import CustomButton from '../components/CustomButton';
+import { update, getUser } from '../services/Auth.services';
+import { useIsFocused } from '@react-navigation/native';
 
 const MeuPerfil = () => {
 
@@ -16,9 +15,28 @@ const MeuPerfil = () => {
   const [password, setPassword] = useState('');
 
   const [hidePassword, setHidePassword] = useState(true);
-  const { id } = useUser();
+  const { id, setSigned } = useUser();
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    if (isFocused) {
+      fetchData();
+    }
+  }, [useIsFocused]);
+
+  const fetchData = async () => {
+    try {
+      const data = await getUser(id);
+      console.log(data)
+      setName(data.name)
+      setEmail(data.email)
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleSubmit = () => {
+    console.log(name, email, password)
     update(id, {
       name: name,
       email: email,
@@ -60,7 +78,7 @@ const MeuPerfil = () => {
           <Label label="Senha" iconName="lock-closed-outline" iconSize={15} />
           <View style={styles.inputPassword}>
             <Input
-              placeholder="Digite sua senha"
+              placeholder="Digite uma nova senha ou confirme a antiga!"
               value={password}
               onChangeText={setPassword}
               secureTextEntry={hidePassword}
@@ -78,8 +96,10 @@ const MeuPerfil = () => {
             </TouchableOpacity>
           </View>
         </View>
-
-        <CustomButton title="Salvar" icon={'save'} onPress={() => {handleSubmit()}}/>
+        <View style={styles.buttonContainer}>
+          <CustomButton title="Sair" icon={'exit-outline'} onPress={() => { setSigned(false) }} />
+          <CustomButton title="Salvar" icon={'save'} onPress={() => { handleSubmit() }} />
+        </View>
 
       </View>
     </SafeAreaView >
@@ -119,6 +139,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  buttonContainer: {
+    flexDirection: "row",
+    alignItems: 'center',
+    gap: 100
+  }
 });
 
 export default MeuPerfil;
