@@ -20,6 +20,12 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#262424"
+      },
+      "package": "com.Comprai"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "774ec532-12fc-4313-9870-9b84cc5e9a86"
       }
     }
   }
