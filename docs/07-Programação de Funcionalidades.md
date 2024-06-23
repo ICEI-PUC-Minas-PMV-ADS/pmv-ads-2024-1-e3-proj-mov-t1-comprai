@@ -86,9 +86,14 @@ Não consegui criar uma funcionalidade de mostrar a senha, o botão ''salvar'' n
 
 ![tela usuario](./img/tela_perfil.jpeg)
 
+
 Estilização atualizada de acordo com o padrão do Figma. Falta deixar a tela responsiva.
 
 ![tela usuario](./img/tela_perfil2.jpeg)
+
+Entregando a tela de usuário finalizada. Agora é possível alterar seu nome, alterar o e-mail e a senha. O botão sair te leva para a página inicial do aplicativo, onde o usuário poderá entrar com uma conta diferente. 
+
+![testeDeTela](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t1-comprai/assets/129460039/b8dd9288-da0b-4d57-854a-4cb8932d360b)
 
 # Tela de Cadastro de Usuario
 
