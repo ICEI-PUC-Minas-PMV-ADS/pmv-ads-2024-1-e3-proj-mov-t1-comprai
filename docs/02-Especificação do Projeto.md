@@ -1,6 +1,6 @@
 # Especificações do Projeto
 
-A definição precisa do problema e os principais aspectos a serem abordados neste projeto foram estabelecidos por meio de um trabalho de imersão realizado pela equipe, envolvendo a observação dos usuários em seu ambiente natural e entrevistas. Os insights obtidos foram sintetizados em personas e histórias de usuários para orientar o desenvolvimento do projeto.
+A definição precisa do problema e os principais aspectos a serem abordados neste projeto foram estabelecidos por meio de um trabalho de imersão realizado pela equipe. Esse trabalho envolveu a observação dos usuários em seus ambientes naturais e a realização de entrevistas. Os insights obtidos foram sintetizados em personas e histórias de usuários, que orientam o desenvolvimento do projeto. 
 
 ## Personas
 
